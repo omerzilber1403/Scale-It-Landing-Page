@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 :root {
-  /* Bold Purple Futuristic Theme - Dark elegant */
-  --bg: #0f0a1f;
-  --bg-glass: rgba(15, 10, 31, 0.75);
-  --fg: #e0d4ff;
-  --fg-muted: #a78bfa;
-  --neon: #a855f7;
-  --neon-2: #ec4899;
-  --accent: #8b5cf6;
-  --border: rgba(168, 139, 250, 0.2);
+  /* 🚀 ELECTRIC BLUE FUTURISTIC THEME */
+  --bg: #f0f9ff;
+  --bg-secondary: #e0f2fe;
+  --fg: #0c4a6e;
+  --fg-muted: #0369a1;
+  --neon: #00d4ff;
+  --neon-2: #0ea5e9;
+  --accent: #06b6d4;
+  --electric: #3b82f6;
+  --border: rgba(14, 165, 233, 0.15);
   
   /* Font stacks */
   --font-display: 'Space Grotesk', 'Heebo', system-ui, sans-serif;
@@ -50,46 +51,93 @@ body {
   min-height: 100vh;
 }
 
-/* Glassmorphism effect */
+/* 🌊 Ultra Modern Glassmorphism */
 .glass {
-  background: rgba(30, 20, 60, 0.6);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 2px solid rgba(14, 165, 233, 0.2);
   box-shadow: 
-    0 8px 32px 0 rgba(168, 85, 247, 0.15),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+    0 8px 32px 0 rgba(14, 165, 233, 0.1),
+    0 2px 8px 0 rgba(6, 182, 212, 0.08),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 0 rgba(14, 165, 233, 0.1);
 }
 
-/* Bold Purple glow effect */
+/* ⚡ ELECTRIC GLOW EFFECTS */
 .neon-glow {
   box-shadow: 
-    0 0 20px rgba(168, 85, 247, 0.4),
-    0 0 40px rgba(168, 85, 247, 0.3),
-    0 0 60px rgba(139, 92, 246, 0.2),
-    0 8px 32px rgba(168, 85, 247, 0.2);
+    0 0 30px rgba(0, 212, 255, 0.3),
+    0 0 60px rgba(14, 165, 233, 0.25),
+    0 0 90px rgba(6, 182, 212, 0.15),
+    0 10px 40px rgba(14, 165, 233, 0.2);
+  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 .neon-glow-subtle {
   box-shadow: 
-    0 0 15px rgba(168, 85, 247, 0.25),
-    0 4px 16px rgba(139, 92, 246, 0.15);
+    0 4px 20px rgba(14, 165, 233, 0.15),
+    0 8px 40px rgba(6, 182, 212, 0.1);
 }
 
 .neon-text-glow {
   text-shadow:
-    0 0 20px rgba(168, 85, 247, 0.6),
-    0 0 40px rgba(139, 92, 246, 0.4),
-    0 0 60px rgba(168, 85, 247, 0.3);
+    0 0 30px rgba(0, 212, 255, 0.5),
+    0 0 60px rgba(14, 165, 233, 0.3),
+    0 0 90px rgba(6, 182, 212, 0.2);
+  animation: text-shimmer 4s ease-in-out infinite;
 }
 
-/* Grid background effect */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 30px rgba(0, 212, 255, 0.3),
+      0 0 60px rgba(14, 165, 233, 0.25),
+      0 0 90px rgba(6, 182, 212, 0.15),
+      0 10px 40px rgba(14, 165, 233, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(0, 212, 255, 0.4),
+      0 0 80px rgba(14, 165, 233, 0.35),
+      0 0 120px rgba(6, 182, 212, 0.25),
+      0 15px 50px rgba(14, 165, 233, 0.3);
+  }
+}
+
+@keyframes text-shimmer {
+  0%, 100% {
+    text-shadow:
+      0 0 30px rgba(0, 212, 255, 0.5),
+      0 0 60px rgba(14, 165, 233, 0.3),
+      0 0 90px rgba(6, 182, 212, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 40px rgba(0, 212, 255, 0.7),
+      0 0 80px rgba(14, 165, 233, 0.5),
+      0 0 120px rgba(6, 182, 212, 0.3);
+  }
+}
+
+/* 🌐 Animated Cyber Grid */
 .grid-bg {
   background-image: 
-    linear-gradient(rgba(168, 85, 247, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.08) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(14, 165, 233, 0.1) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+  background-size: 60px 60px, 60px 60px, 100% 100%;
   background-position: center center;
+  animation: grid-flow 20s linear infinite;
+}
+
+@keyframes grid-flow {
+  0% {
+    background-position: 0 0, 0 0, center;
+  }
+  100% {
+    background-position: 60px 60px, -60px -60px, center;
+  }
 }
 
 /* Focus visible for accessibility */
@@ -119,19 +167,19 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 10, 31, 0.8);
+  background: rgba(224, 242, 254, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #a855f7, #ec4899);
-  border-radius: 5px;
+  background: linear-gradient(180deg, #00d4ff, #0ea5e9, #06b6d4);
+  border-radius: 10px;
   border: 2px solid var(--bg);
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #c084fc, #f472b6);
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+  background: linear-gradient(180deg, #38bdf8, #00d4ff, #22d3ee);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
 }
 
 /* Loading animation for images */
@@ -148,20 +196,51 @@ body {
   animation: shimmer 2s infinite linear;
   background: linear-gradient(
     to right,
-    rgba(30, 20, 60, 0.5) 4%,
-    rgba(168, 85, 247, 0.3) 25%,
-    rgba(30, 20, 60, 0.5) 36%
+    rgba(224, 242, 254, 0.5) 4%,
+    rgba(0, 212, 255, 0.2) 25%,
+    rgba(224, 242, 254, 0.5) 36%
   );
   background-size: 1000px 100%;
 }
 
-/* Additional modern effects */
+/* 🎭 ULTRA MODERN EFFECTS */
 .hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 212, 255, 0.25),
+    0 15px 30px -10px rgba(14, 165, 233, 0.2),
+    0 0 40px rgba(6, 182, 212, 0.15);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Rotate animation */
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 30s linear infinite;
 }
 
