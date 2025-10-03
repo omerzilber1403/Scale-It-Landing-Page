@@ -443,7 +443,7 @@ body {
 .cube-3d {
   width: 60px;
   height: 60px;
-  position: fixed;
+  position: absolute;
   transform-style: preserve-3d;
   animation: rotate-3d-cube 20s linear infinite;
   z-index: 1;
@@ -465,7 +465,7 @@ body {
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   border-bottom: 70px solid rgba(71, 85, 105, 0.15);
-  position: fixed;
+  position: absolute;
   filter: drop-shadow(0 0 20px rgba(100, 116, 139, 0.2));
   animation: rotate-wobble 15s ease-in-out infinite;
   z-index: 1;
@@ -478,7 +478,7 @@ body {
   background: linear-gradient(135deg, rgba(71, 85, 105, 0.18), rgba(148, 163, 184, 0.12));
   border: 2px solid rgba(71, 85, 105, 0.25);
   transform: rotate(45deg);
-  position: fixed;
+  position: absolute;
   animation: bounce-rotate 12s ease-in-out infinite;
   box-shadow: 0 0 30px rgba(100, 116, 139, 0.15);
   z-index: 1;
@@ -490,7 +490,7 @@ body {
   height: 29px;
   background: rgba(71, 85, 105, 0.15);
   border: 2px solid rgba(71, 85, 105, 0.2);
-  position: fixed;
+  position: absolute;
   animation: spin-float 18s ease-in-out infinite;
   z-index: 1;
 }
