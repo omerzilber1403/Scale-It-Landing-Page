@@ -233,11 +233,16 @@ body {
 
 /* Mobile spacing helpers */
 .mobile-spacer {
-  height: 5vh;
+  height: 8vh;
+}
+
+.mobile-spacer-large {
+  height: 12vh;
 }
 
 @media (min-width: 768px) {
-  .mobile-spacer {
+  .mobile-spacer,
+  .mobile-spacer-large {
     display: none;
   }
 }

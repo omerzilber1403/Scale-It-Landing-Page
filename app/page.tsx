@@ -80,42 +80,48 @@ export default function Home() {
           <Hero lang={lang} />
         </section>
 
-        {/* Mobile Spacer */}
+        {/* Mobile Spacers after Hero */}
+        <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
         <section id="services" className="snap-section py-12 md:py-0">
           <Services lang={lang} />
         </section>
 
-        {/* Mobile Spacer */}
+        {/* Mobile Spacers */}
+        <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
         <section id="why-us" className="snap-section py-12 md:py-0">
           <WhyUs lang={lang} />
         </section>
 
-        {/* Mobile Spacer */}
+        {/* Mobile Spacers */}
+        <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
         <section id="media" className="snap-section py-12 md:py-0">
           <Media lang={lang} />
         </section>
 
-        {/* Mobile Spacer */}
+        {/* Mobile Spacers */}
+        <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
         <section id="results" className="snap-section py-12 md:py-0">
           <Results lang={lang} />
         </section>
 
-        {/* Mobile Spacer */}
+        {/* Mobile Spacers */}
+        <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
         <section id="contact" className="snap-section py-12 md:py-0">
           <Contact lang={lang} />
         </section>
 
-        {/* Final Mobile Spacer */}
+        {/* Final Mobile Spacers */}
+        <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
         {/* Footer as snap section */}
