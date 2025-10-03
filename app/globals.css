@@ -83,8 +83,9 @@ body {
 
 .neon-text-glow {
   text-shadow:
-    0 2px 15px rgba(30, 64, 175, 0.3),
-    0 4px 30px rgba(37, 99, 235, 0.2);
+    0 2px 20px rgba(255, 255, 255, 0.4),
+    0 4px 40px rgba(148, 163, 184, 0.2),
+    0 1px 3px rgba(30, 64, 175, 0.15);
   animation: tech-shimmer 4s ease-in-out infinite;
 }
 
@@ -104,13 +105,15 @@ body {
 @keyframes tech-shimmer {
   0%, 100% {
     text-shadow:
-      0 2px 15px rgba(30, 64, 175, 0.3),
-      0 4px 30px rgba(37, 99, 235, 0.2);
+      0 2px 20px rgba(255, 255, 255, 0.4),
+      0 4px 40px rgba(148, 163, 184, 0.2),
+      0 1px 3px rgba(30, 64, 175, 0.15);
   }
   50% {
     text-shadow:
-      0 3px 20px rgba(30, 64, 175, 0.4),
-      0 6px 40px rgba(37, 99, 235, 0.3);
+      0 3px 25px rgba(255, 255, 255, 0.5),
+      0 6px 50px rgba(148, 163, 184, 0.25),
+      0 2px 4px rgba(30, 64, 175, 0.2);
   }
 }
 

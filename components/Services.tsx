@@ -24,12 +24,16 @@ export default function Services({ lang }: ServicesProps) {
     <div className="relative min-h-screen flex items-center justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
       
-      {/* Soft Background Elements */}
+      {/* Soft Background Elements - More Shapes */}
       <div className="bubble w-36 h-36 animate-gentle-float" style={{ top: '15%', right: '12%', animationDelay: '3s' }} aria-hidden="true" />
       <div className="bubble w-28 h-28 animate-soft-pulse" style={{ bottom: '20%', left: '8%', animationDelay: '8s' }} aria-hidden="true" />
+      <div className="bubble w-32 h-32 animate-gentle-float" style={{ top: '50%', right: '5%', animationDelay: '14s' }} aria-hidden="true" />
+      <div className="bubble w-26 h-26 animate-soft-pulse" style={{ top: '70%', left: '40%', animationDelay: '20s' }} aria-hidden="true" />
       <div className="cloud w-72 h-56 animate-cloud-drift" style={{ top: '30%', left: '25%', animationDelay: '5s' }} aria-hidden="true" />
       <div className="cloud w-64 h-48 animate-cloud-drift" style={{ bottom: '15%', right: '20%', animationDelay: '12s' }} aria-hidden="true" />
+      <div className="cloud w-60 h-46 animate-cloud-drift" style={{ top: '60%', right: '35%', animationDelay: '18s' }} aria-hidden="true" />
       <div className="soft-ring w-52 h-52" style={{ top: '25%', right: '30%', animationDelay: '6s' }} aria-hidden="true" />
+      <div className="soft-ring w-46 h-46" style={{ bottom: '35%', left: '30%', animationDelay: '24s' }} aria-hidden="true" />
       
       <motion.div
         ref={ref}

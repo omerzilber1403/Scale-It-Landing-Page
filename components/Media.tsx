@@ -26,12 +26,16 @@ export default function Media({ lang }: MediaProps) {
     <div className="relative min-h-screen flex flex-col justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
-      {/* Soft Background Elements */}
+      {/* Soft Background Elements - More Shapes */}
       <div className="bubble w-32 h-32 animate-gentle-float" style={{ top: '10%', left: '10%', animationDelay: '4s' }} aria-hidden="true" />
       <div className="bubble w-40 h-40 animate-soft-pulse" style={{ bottom: '12%', right: '10%', animationDelay: '9s' }} aria-hidden="true" />
+      <div className="bubble w-28 h-28 animate-gentle-float" style={{ top: '55%', left: '5%', animationDelay: '16s' }} aria-hidden="true" />
+      <div className="bubble w-34 h-34 animate-soft-pulse" style={{ top: '75%', right: '40%', animationDelay: '22s' }} aria-hidden="true" />
       <div className="cloud w-68 h-52 animate-cloud-drift" style={{ top: '40%', right: '15%', animationDelay: '7s' }} aria-hidden="true" />
       <div className="cloud w-60 h-44 animate-cloud-drift" style={{ bottom: '30%', left: '18%', animationDelay: '14s' }} aria-hidden="true" />
+      <div className="cloud w-64 h-48 animate-cloud-drift" style={{ top: '65%', left: '45%', animationDelay: '20s' }} aria-hidden="true" />
       <div className="soft-ring w-48 h-48" style={{ top: '20%', left: '35%', animationDelay: '10s' }} aria-hidden="true" />
+      <div className="soft-ring w-50 h-50" style={{ bottom: '45%', right: '25%', animationDelay: '26s' }} aria-hidden="true" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto w-full">
         <motion.h2
