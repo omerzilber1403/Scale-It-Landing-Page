@@ -74,64 +74,34 @@ export default function Home() {
       <div className="pentagon-3d" style={{ top: '70%', left: '28%', animationDelay: '23s', animationDuration: '18s' }} aria-hidden="true" />
       <div className="pentagon-3d" style={{ top: '92%', right: '18%', animationDelay: '10s' }} aria-hidden="true" />
 
-      {/* Sections with scroll snap */}
+      {/* Sections */}
       <div>
-        <section id="hero" className="snap-section pt-16 md:pt-0">
+        <section id="hero" className="min-h-screen flex items-center justify-center">
           <Hero lang={lang} />
         </section>
 
-        {/* Mobile Spacers after Hero */}
-        <div className="mobile-spacer-extra" />
-        <div className="mobile-spacer-large" />
-        <div className="mobile-spacer" />
-
-        <section id="services" className="snap-section py-12 md:py-0">
+        <section id="services" className="min-h-screen flex items-center justify-center py-20">
           <Services lang={lang} />
         </section>
 
-        {/* Mobile Spacers */}
-        <div className="mobile-spacer-extra" />
-        <div className="mobile-spacer-large" />
-        <div className="mobile-spacer" />
-
-        <section id="why-us" className="snap-section py-12 md:py-0">
+        <section id="why-us" className="min-h-screen flex items-center justify-center py-20">
           <WhyUs lang={lang} />
         </section>
 
-        {/* Mobile Spacers */}
-        <div className="mobile-spacer-extra" />
-        <div className="mobile-spacer-large" />
-        <div className="mobile-spacer" />
-
-        <section id="media" className="snap-section py-12 md:py-0">
+        <section id="media" className="min-h-screen flex items-center justify-center py-20">
           <Media lang={lang} />
         </section>
 
-        {/* Mobile Spacers */}
-        <div className="mobile-spacer-extra" />
-        <div className="mobile-spacer-large" />
-        <div className="mobile-spacer" />
-
-        <section id="results" className="snap-section py-12 md:py-0">
+        <section id="results" className="min-h-screen flex items-center justify-center py-20">
           <Results lang={lang} />
         </section>
 
-        {/* Mobile Spacers */}
-        <div className="mobile-spacer-extra" />
-        <div className="mobile-spacer-large" />
-        <div className="mobile-spacer" />
-
-        <section id="contact" className="snap-section py-12 md:py-0">
+        <section id="contact" className="min-h-screen flex items-center justify-center py-20">
           <Contact lang={lang} />
         </section>
 
-        {/* Final Mobile Spacers */}
-        <div className="mobile-spacer-extra" />
-        <div className="mobile-spacer-large" />
-        <div className="mobile-spacer" />
-
-        {/* Footer as snap section */}
-        <section id="footer" className="snap-section py-8 px-4 border-t border-neon/20 glass">
+        {/* Footer */}
+        <section id="footer" className="py-8 px-4 border-t border-neon/20 glass">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Left side - Logo/Brand */}

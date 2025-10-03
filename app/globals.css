@@ -44,51 +44,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Smooth scroll for sections */
-.snap-container {
-  position: relative;
-}
-
-.snap-section {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* No scroll snap on mobile - smooth natural scrolling */
-@media (max-width: 767px) {
-  .snap-container {
-    scroll-snap-type: none;
-  }
-  
-  .snap-section {
-    min-height: auto;
-  }
-}
-
-/* Desktop scroll snap - smooth experience */
-@media (min-width: 768px) {
-  .snap-container {
-    scroll-snap-type: y proximity;
-    overflow-y: scroll;
-    height: 100vh;
-  }
-  
-  .snap-section {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
-  }
-}
-
-/* Footer section - allow scrolling past it */
-#footer {
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-  min-height: auto;
-  justify-content: flex-start;
-}
+/* Smooth natural scrolling */
 
 /* 💙 Perfect Glass Effect with Subtle Orange */
 .glass {
@@ -253,26 +209,6 @@ body {
   background-size: 1000px 100%;
 }
 
-/* Mobile spacing helpers */
-.mobile-spacer {
-  height: 2vh;
-}
-
-.mobile-spacer-large {
-  height: 4vh;
-}
-
-.mobile-spacer-extra {
-  height: 5vh;
-}
-
-@media (min-width: 768px) {
-  .mobile-spacer,
-  .mobile-spacer-large,
-  .mobile-spacer-extra {
-    display: none;
-  }
-}
 
 /* 🎭 Smooth Premium Effects */
 .hover-lift {
