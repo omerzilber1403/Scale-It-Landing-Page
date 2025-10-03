@@ -119,6 +119,51 @@ export default function Home() {
         <div className="mobile-spacer" />
       </div>
 
+      {/* Footer */}
+      <footer className="relative z-20 py-8 px-4 border-t border-neon/20 glass">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* Left side - Logo/Brand */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-neon to-neon-2 flex items-center justify-center neon-glow">
+                <span className="text-bg font-bold text-xl">S</span>
+              </div>
+              <div>
+                <div className="text-lg font-bold text-neon">Scale It Media</div>
+                <div className="text-xs text-fg-muted">{lang === 'he' ? 'אסטרטגיות גדילה בדיגיטל' : 'Digital Growth Strategies'}</div>
+              </div>
+            </div>
+
+            {/* Center - Built by */}
+            <div className="flex items-center gap-2 text-fg-muted">
+              <span className="text-sm">{lang === 'he' ? 'נבנה על ידי' : 'Built by'}</span>
+              <a
+                href="https://zilber.solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-neon-2/20 to-neon/20 border border-neon/30 hover:border-neon-2 transition-all duration-300 group"
+              >
+                <svg className="w-5 h-5 text-neon-2 group-hover:rotate-12 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-2 to-neon">
+                  Zilber Solutions
+                </span>
+              </a>
+            </div>
+
+            {/* Right side - Copyright */}
+            <div className="text-sm text-fg-muted">
+              © 2025 Scale It Media
+            </div>
+          </div>
+        </div>
+
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-10 w-32 h-32 rounded-full bg-neon/10 blur-3xl pointer-events-none" aria-hidden="true" />
+        <div className="absolute bottom-0 right-10 w-32 h-32 rounded-full bg-neon-2/10 blur-3xl pointer-events-none" aria-hidden="true" />
+      </footer>
+
     </main>
   );
 }
