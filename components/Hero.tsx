@@ -2,7 +2,6 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
 import { getTranslations, Lang } from '@/lib/i18n';
 
 interface HeroProps {
@@ -14,33 +13,29 @@ export default function Hero({ lang }: HeroProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const scrollToServices = () => {
-    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div ref={ref} className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
-      {/* Floating orbs */}
+      {/* Floating orbs - light mode */}
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
+          opacity: [0.15, 0.25, 0.15],
         }}
         transition={{
           duration: 8,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-20 left-10 w-64 h-64 rounded-full bg-neon blur-3xl pointer-events-none"
+        className="absolute top-20 left-10 w-96 h-96 rounded-full bg-gradient-to-br from-blue-400 to-cyan-300 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
       <motion.div
         animate={{
           scale: [1, 1.3, 1],
-          opacity: [0.2, 0.4, 0.2],
+          opacity: [0.12, 0.22, 0.12],
         }}
         transition={{
           duration: 10,
@@ -48,7 +43,21 @@ export default function Hero({ lang }: HeroProps) {
           ease: 'easeInOut',
           delay: 2,
         }}
-        className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-neon-2 blur-3xl pointer-events-none"
+        className="absolute bottom-20 right-10 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-purple-400 to-pink-300 blur-3xl pointer-events-none"
+        aria-hidden="true"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.15, 1],
+          opacity: [0.1, 0.2, 0.1],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 4,
+        }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-indigo-300 to-blue-200 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
 
@@ -84,20 +93,6 @@ export default function Hero({ lang }: HeroProps) {
           {t.hero.cta}
         </motion.button>
 
-        {/* Scroll indicator */}
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1, y: [0, 10, 0] } : { opacity: 0 }}
-          transition={{
-            opacity: { duration: 1, delay: 1 },
-            y: { duration: 2, repeat: Infinity, ease: 'easeInOut' },
-          }}
-          onClick={scrollToServices}
-          className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2 text-neon hover:text-neon-2 transition-colors"
-          aria-label="Scroll down"
-        >
-          <ArrowDown size={32} />
-        </motion.button>
       </div>
     </div>
   );

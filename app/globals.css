@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 :root {
-  /* Dark futuristic theme */
-  --bg: #0b0f14;
-  --bg-glass: rgba(15, 23, 42, 0.7);
-  --fg: #e6f1ff;
-  --fg-muted: #94a3b8;
-  --neon: #66ddff;
-  --neon-2: #bb66ff;
+  /* Clean futuristic theme - Light mode */
+  --bg: #f8fafc;
+  --bg-glass: rgba(248, 250, 252, 0.85);
+  --fg: #0f172a;
+  --fg-muted: #64748b;
+  --neon: #3b82f6;
+  --neon-2: #8b5cf6;
+  --accent: #06b6d4;
+  --border: rgba(148, 163, 184, 0.2);
   
   /* Font stacks */
   --font-display: 'Space Grotesk', 'Heebo', system-ui, sans-serif;
@@ -50,39 +52,38 @@ body {
 
 /* Glassmorphism effect */
 .glass {
-  background: var(--bg-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(102, 221, 255, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
-/* Neon glow effect */
+/* Modern glow effect */
 .neon-glow {
   box-shadow: 
-    0 0 10px rgba(102, 221, 255, 0.3),
-    0 0 20px rgba(102, 221, 255, 0.2),
-    0 0 30px rgba(102, 221, 255, 0.1);
+    0 4px 14px 0 rgba(59, 130, 246, 0.25),
+    0 10px 25px 0 rgba(139, 92, 246, 0.15);
 }
 
 .neon-glow-subtle {
   box-shadow: 
-    0 0 5px rgba(102, 221, 255, 0.2),
-    0 0 10px rgba(102, 221, 255, 0.1);
+    0 2px 8px 0 rgba(59, 130, 246, 0.15),
+    0 4px 12px 0 rgba(139, 92, 246, 0.1);
 }
 
 .neon-text-glow {
   text-shadow:
-    0 0 10px rgba(102, 221, 255, 0.5),
-    0 0 20px rgba(102, 221, 255, 0.3),
-    0 0 30px rgba(102, 221, 255, 0.2);
+    0 2px 10px rgba(59, 130, 246, 0.3),
+    0 4px 20px rgba(139, 92, 246, 0.2);
 }
 
 /* Grid background effect */
 .grid-bg {
   background-image: 
-    linear-gradient(rgba(102, 221, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(102, 221, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
   background-position: center center;
 }
 
@@ -109,20 +110,21 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: rgba(0, 0, 0, 0.02);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--neon);
-  border-radius: 4px;
+  background: linear-gradient(180deg, var(--neon), var(--neon-2));
+  border-radius: 5px;
+  border: 2px solid var(--bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--neon-2);
+  background: linear-gradient(180deg, var(--neon-2), var(--accent));
 }
 
 /* Loading animation for images */
@@ -139,10 +141,20 @@ body {
   animation: shimmer 2s infinite linear;
   background: linear-gradient(
     to right,
-    rgba(15, 23, 42, 0.5) 4%,
-    rgba(102, 221, 255, 0.1) 25%,
-    rgba(15, 23, 42, 0.5) 36%
+    rgba(248, 250, 252, 0.8) 4%,
+    rgba(59, 130, 246, 0.15) 25%,
+    rgba(248, 250, 252, 0.8) 36%
   );
   background-size: 1000px 100%;
+}
+
+/* Additional modern effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 

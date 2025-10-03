@@ -61,10 +61,6 @@ export default function Home() {
         </section>
       </div>
 
-      {/* Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 py-3 pb-20 md:pb-3 text-center text-xs text-fg-muted pointer-events-none z-10">
-        <p>© 2025 Scale It Media • {lang === 'he' ? 'נבנה עם' : 'Built with'} Next.js</p>
-      </footer>
     </main>
   );
 }
