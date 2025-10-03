@@ -19,10 +19,12 @@ export default function Results({ lang }: ResultsProps) {
     <div className="relative min-h-screen flex items-center justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
-      {/* Decorative Shapes */}
-      <div className="geometric-shape w-36 h-36 rounded-full animate-pulse-scale" style={{ top: '12%', right: '10%', borderColor: '#3b82f6', animationDelay: '3s' }} aria-hidden="true" />
-      <div className="geometric-shape w-32 h-32 animate-float-sections" style={{ bottom: '18%', left: '15%', borderColor: '#14b8a6', animationDelay: '7s' }} aria-hidden="true" />
-      <div className="spiral-line" style={{ top: '35%', left: '8%', borderColor: '#8b5cf6', animationDelay: '9s' }} aria-hidden="true" />
+      {/* Soft Background Elements */}
+      <div className="bubble w-36 h-36 animate-gentle-float" style={{ top: '14%', right: '12%', animationDelay: '5s' }} aria-hidden="true" />
+      <div className="bubble w-32 h-32 animate-soft-pulse" style={{ bottom: '20%', left: '14%', animationDelay: '11s' }} aria-hidden="true" />
+      <div className="cloud w-76 h-60 animate-cloud-drift" style={{ top: '28%', left: '10%', animationDelay: '8s' }} aria-hidden="true" />
+      <div className="cloud w-64 h-48 animate-cloud-drift" style={{ bottom: '25%', right: '22%', animationDelay: '16s' }} aria-hidden="true" />
+      <div className="soft-ring w-54 h-54" style={{ top: '50%', right: '18%', animationDelay: '13s' }} aria-hidden="true" />
       
       <motion.div
         ref={ref}
