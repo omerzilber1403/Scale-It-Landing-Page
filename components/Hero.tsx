@@ -33,42 +33,57 @@ export default function Hero({ lang }: HeroProps) {
         />
       ))}
       
-      {/* 🔷 Geometric Shapes */}
+      {/* 🔷 Bold Geometric Shapes - Travel Across Sections */}
       <div
-        className="geometric-shape w-32 h-32 animate-rotate-3d"
+        className="geometric-shape w-40 h-40 animate-float-sections"
         style={{
-          top: '15%',
-          right: '10%',
+          top: '-10%',
+          right: '12%',
+          borderColor: '#ec4899',
           animationDelay: '0s',
         }}
         aria-hidden="true"
       />
       <div
-        className="geometric-shape w-24 h-24 rounded-full animate-pulse-scale"
+        className="geometric-shape w-32 h-32 rounded-full animate-pulse-scale"
         style={{
-          bottom: '20%',
-          left: '15%',
-          animationDelay: '3s',
+          top: '30%',
+          left: '8%',
+          borderColor: '#8b5cf6',
+          animationDelay: '4s',
         }}
         aria-hidden="true"
       />
       <div
-        className="geometric-shape w-20 h-20 animate-rotate-3d"
+        className="geometric-shape w-36 h-36 animate-float-sections"
         style={{
-          top: '40%',
-          left: '8%',
-          animationDelay: '6s',
-          animationDuration: '25s',
+          top: '-20%',
+          left: '18%',
+          borderColor: '#06b6d4',
+          animationDelay: '8s',
+          animationDuration: '45s',
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="geometric-shape w-28 h-28 animate-float-sections"
+        style={{
+          top: '5%',
+          right: '40%',
+          borderColor: '#14b8a6',
+          animationDelay: '12s',
+          animationDuration: '50s',
         }}
         aria-hidden="true"
       />
       
-      {/* 🌀 Spiral Lines */}
+      {/* 🌀 Bold Spiral Lines - Continuous Journey */}
       <div
         className="spiral-line"
         style={{
-          top: '25%',
-          right: '20%',
+          top: '-5%',
+          right: '25%',
+          borderColor: '#f59e0b',
           animationDelay: '0s',
         }}
         aria-hidden="true"
@@ -76,20 +91,33 @@ export default function Hero({ lang }: HeroProps) {
       <div
         className="spiral-line"
         style={{
-          bottom: '30%',
-          left: '25%',
-          animationDelay: '5s',
-          animationDuration: '25s',
+          top: '10%',
+          left: '35%',
+          borderColor: '#3b82f6',
+          animationDelay: '7s',
+          animationDuration: '40s',
         }}
         aria-hidden="true"
       />
       <div
         className="spiral-line"
         style={{
-          top: '60%',
-          right: '35%',
-          animationDelay: '10s',
-          animationDuration: '30s',
+          top: '-8%',
+          right: '50%',
+          borderColor: '#10b981',
+          animationDelay: '14s',
+          animationDuration: '38s',
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="spiral-line"
+        style={{
+          top: '20%',
+          left: '60%',
+          borderColor: '#ef4444',
+          animationDelay: '21s',
+          animationDuration: '42s',
         }}
         aria-hidden="true"
       />
