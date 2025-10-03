@@ -35,37 +35,27 @@ export default function Hero({ lang }: HeroProps) {
       
       {/* 🎲 3D Geometric Shapes - Blue */}
       <div className="cube-3d" style={{ top: '10%', right: '15%', animationDelay: '0s' }} aria-hidden="true" />
-      <div className="cube-3d" style={{ bottom: '20%', left: '10%', animationDelay: '5s', animationDuration: '25s' }} aria-hidden="true" />
-      <div className="cube-3d" style={{ top: '65%', right: '8%', animationDelay: '10s', animationDuration: '30s' }} aria-hidden="true" />
+      <div className="cube-3d" style={{ bottom: '25%', left: '12%', animationDelay: '8s', animationDuration: '25s' }} aria-hidden="true" />
       
-      <div className="triangle-3d" style={{ top: '25%', left: '8%', animationDelay: '2s' }} aria-hidden="true" />
-      <div className="triangle-3d" style={{ bottom: '30%', right: '20%', animationDelay: '8s', animationDuration: '18s' }} aria-hidden="true" />
-      <div className="triangle-3d" style={{ top: '50%', right: '5%', animationDelay: '14s' }} aria-hidden="true" />
+      <div className="triangle-3d" style={{ top: '40%', left: '8%', animationDelay: '4s' }} aria-hidden="true" />
+      <div className="triangle-3d" style={{ bottom: '30%', right: '20%', animationDelay: '10s', animationDuration: '18s' }} aria-hidden="true" />
       
-      <div className="diamond-3d" style={{ top: '15%', left: '25%', animationDelay: '1s' }} aria-hidden="true" />
-      <div className="diamond-3d" style={{ bottom: '35%', right: '30%', animationDelay: '7s', animationDuration: '15s' }} aria-hidden="true" />
-      <div className="diamond-3d" style={{ top: '70%', left: '15%', animationDelay: '12s' }} aria-hidden="true" />
-      <div className="diamond-3d" style={{ top: '40%', right: '12%', animationDelay: '16s', animationDuration: '14s' }} aria-hidden="true" />
+      <div className="diamond-3d" style={{ top: '20%', left: '25%', animationDelay: '2s' }} aria-hidden="true" />
+      <div className="diamond-3d" style={{ top: '65%', right: '15%', animationDelay: '12s', animationDuration: '14s' }} aria-hidden="true" />
       
-      <div className="hexagon-3d" style={{ top: '30%', right: '35%', animationDelay: '3s' }} aria-hidden="true" />
-      <div className="hexagon-3d" style={{ bottom: '25%', left: '30%', animationDelay: '9s', animationDuration: '20s' }} aria-hidden="true" />
-      <div className="hexagon-3d" style={{ top: '80%', right: '40%', animationDelay: '15s' }} aria-hidden="true" />
+      <div className="hexagon-3d" style={{ top: '30%', right: '35%', animationDelay: '5s' }} aria-hidden="true" />
+      <div className="hexagon-3d" style={{ bottom: '40%', left: '35%', animationDelay: '14s', animationDuration: '20s' }} aria-hidden="true" />
       
       {/* 🟢 Green Physics Shapes */}
-      <div className="star-3d" style={{ top: '18%', left: '35%', animationDelay: '2s' }} aria-hidden="true" />
-      <div className="star-3d" style={{ bottom: '40%', right: '25%', animationDelay: '8s', animationDuration: '12s' }} aria-hidden="true" />
-      <div className="star-3d" style={{ top: '75%', left: '42%', animationDelay: '14s', animationDuration: '11s' }} aria-hidden="true" />
-      <div className="star-3d" style={{ top: '45%', left: '12%', animationDelay: '20s' }} aria-hidden="true" />
+      <div className="star-3d" style={{ top: '18%', left: '38%', animationDelay: '3s' }} aria-hidden="true" />
+      <div className="star-3d" style={{ bottom: '45%', right: '28%', animationDelay: '11s', animationDuration: '12s' }} aria-hidden="true" />
       
       {/* 🟠 Orange Physics Shapes */}
-      <div className="circle-3d" style={{ top: '12%', right: '25%', animationDelay: '1s' }} aria-hidden="true" />
-      <div className="circle-3d" style={{ bottom: '28%', left: '20%', animationDelay: '7s', animationDuration: '16s' }} aria-hidden="true" />
-      <div className="circle-3d" style={{ top: '55%', right: '18%', animationDelay: '13s', animationDuration: '15s' }} aria-hidden="true" />
-      <div className="circle-3d" style={{ bottom: '15%', left: '38%', animationDelay: '19s' }} aria-hidden="true" />
+      <div className="circle-3d" style={{ top: '55%', right: '10%', animationDelay: '6s', animationDuration: '15s' }} aria-hidden="true" />
+      <div className="circle-3d" style={{ bottom: '15%', left: '40%', animationDelay: '13s' }} aria-hidden="true" />
       
-      <div className="pentagon-3d" style={{ top: '35%', right: '8%', animationDelay: '3s' }} aria-hidden="true" />
-      <div className="pentagon-3d" style={{ bottom: '45%', left: '15%', animationDelay: '9s', animationDuration: '18s' }} aria-hidden="true" />
-      <div className="pentagon-3d" style={{ top: '85%', right: '35%', animationDelay: '15s', animationDuration: '17s' }} aria-hidden="true" />
+      <div className="pentagon-3d" style={{ top: '75%', left: '18%', animationDelay: '9s', animationDuration: '17s' }} aria-hidden="true" />
+      <div className="pentagon-3d" style={{ top: '45%', right: '8%', animationDelay: '16s' }} aria-hidden="true" />
       
       {/* ☁️ Soft Clouds for depth */}
       <div className="cloud w-64 h-48 animate-cloud-drift" style={{ top: '12%', left: '20%', animationDelay: '2s' }} aria-hidden="true" />
