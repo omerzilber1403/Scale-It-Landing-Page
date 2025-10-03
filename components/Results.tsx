@@ -19,16 +19,23 @@ export default function Results({ lang }: ResultsProps) {
     <div className="relative min-h-screen flex items-center justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
-      {/* Soft Background Elements - More Shapes */}
-      <div className="bubble w-36 h-36 animate-gentle-float" style={{ top: '14%', right: '12%', animationDelay: '5s' }} aria-hidden="true" />
-      <div className="bubble w-32 h-32 animate-soft-pulse" style={{ bottom: '20%', left: '14%', animationDelay: '11s' }} aria-hidden="true" />
-      <div className="bubble w-30 h-30 animate-gentle-float" style={{ top: '60%', right: '8%', animationDelay: '17s' }} aria-hidden="true" />
-      <div className="bubble w-38 h-38 animate-soft-pulse" style={{ top: '40%', left: '6%', animationDelay: '23s' }} aria-hidden="true" />
-      <div className="cloud w-76 h-60 animate-cloud-drift" style={{ top: '28%', left: '10%', animationDelay: '8s' }} aria-hidden="true" />
-      <div className="cloud w-64 h-48 animate-cloud-drift" style={{ bottom: '25%', right: '22%', animationDelay: '16s' }} aria-hidden="true" />
-      <div className="cloud w-62 h-46 animate-cloud-drift" style={{ top: '72%', left: '35%', animationDelay: '21s' }} aria-hidden="true" />
-      <div className="soft-ring w-54 h-54" style={{ top: '50%', right: '18%', animationDelay: '13s' }} aria-hidden="true" />
-      <div className="soft-ring w-48 h-48" style={{ bottom: '40%', left: '25%', animationDelay: '27s' }} aria-hidden="true" />
+      {/* 🎲 3D Geometric Shapes */}
+      <div className="cube-3d" style={{ top: '15%', right: '14%', animationDelay: '3s', animationDuration: '23s' }} aria-hidden="true" />
+      <div className="cube-3d" style={{ bottom: '22%', left: '16%', animationDelay: '9s' }} aria-hidden="true" />
+      
+      <div className="triangle-3d" style={{ top: '38%', left: '7%', animationDelay: '5s' }} aria-hidden="true" />
+      <div className="triangle-3d" style={{ bottom: '28%', right: '20%', animationDelay: '12s', animationDuration: '16s' }} aria-hidden="true" />
+      
+      <div className="diamond-3d" style={{ top: '22%', left: '22%', animationDelay: '4s' }} aria-hidden="true" />
+      <div className="diamond-3d" style={{ bottom: '35%', right: '25%', animationDelay: '10s', animationDuration: '15s' }} aria-hidden="true" />
+      <div className="diamond-3d" style={{ top: '68%', left: '32%', animationDelay: '16s' }} aria-hidden="true" />
+      
+      <div className="hexagon-3d" style={{ top: '50%', right: '30%', animationDelay: '7s' }} aria-hidden="true" />
+      <div className="hexagon-3d" style={{ bottom: '45%', left: '38%', animationDelay: '14s', animationDuration: '20s' }} aria-hidden="true" />
+      
+      {/* ☁️ Soft Clouds for depth */}
+      <div className="cloud w-70 h-54 animate-cloud-drift" style={{ top: '32%', left: '12%', animationDelay: '9s' }} aria-hidden="true" />
+      <div className="cloud w-62 h-46 animate-cloud-drift" style={{ bottom: '26%', right: '24%', animationDelay: '17s' }} aria-hidden="true" />
       
       <motion.div
         ref={ref}

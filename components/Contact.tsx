@@ -78,6 +78,24 @@ export default function Contact({ lang }: ContactProps) {
   return (
     <div className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
+      
+      {/* 🎲 3D Geometric Shapes */}
+      <div className="cube-3d" style={{ top: '10%', right: '8%', animationDelay: '2s', animationDuration: '21s' }} aria-hidden="true" />
+      <div className="cube-3d" style={{ bottom: '20%', left: '10%', animationDelay: '8s' }} aria-hidden="true" />
+      
+      <div className="triangle-3d" style={{ top: '30%', left: '6%', animationDelay: '4s', animationDuration: '17s' }} aria-hidden="true" />
+      <div className="triangle-3d" style={{ bottom: '32%', right: '18%', animationDelay: '11s' }} aria-hidden="true" />
+      
+      <div className="diamond-3d" style={{ top: '18%', left: '24%', animationDelay: '3s' }} aria-hidden="true" />
+      <div className="diamond-3d" style={{ bottom: '28%', right: '22%', animationDelay: '9s', animationDuration: '14s' }} aria-hidden="true" />
+      <div className="diamond-3d" style={{ top: '62%', left: '30%', animationDelay: '15s' }} aria-hidden="true" />
+      
+      <div className="hexagon-3d" style={{ top: '42%', right: '32%', animationDelay: '6s' }} aria-hidden="true" />
+      <div className="hexagon-3d" style={{ bottom: '42%', left: '36%', animationDelay: '13s', animationDuration: '22s' }} aria-hidden="true" />
+      
+      {/* ☁️ Soft Clouds for depth */}
+      <div className="cloud w-66 h-50 animate-cloud-drift" style={{ top: '28%', left: '14%', animationDelay: '7s' }} aria-hidden="true" />
+      <div className="cloud w-62 h-48 animate-cloud-drift" style={{ bottom: '24%', right: '20%', animationDelay: '15s' }} aria-hidden="true" />
 
       <motion.div
         ref={ref}
