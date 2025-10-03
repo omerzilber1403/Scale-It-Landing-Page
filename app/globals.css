@@ -44,17 +44,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Smooth scroll snap for sections */
+/* Smooth scroll for sections */
 .snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
   position: relative;
 }
 
 .snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   min-height: 100vh;
   position: relative;
   display: flex;
@@ -62,13 +57,27 @@ body {
   justify-content: center;
 }
 
-/* Weaker scroll snap on mobile */
+/* No scroll snap on mobile - smooth natural scrolling */
 @media (max-width: 767px) {
   .snap-container {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: none;
   }
   
   .snap-section {
+    min-height: auto;
+  }
+}
+
+/* Desktop scroll snap - smooth experience */
+@media (min-width: 768px) {
+  .snap-container {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  
+  .snap-section {
+    scroll-snap-align: start;
     scroll-snap-stop: normal;
   }
 }
@@ -246,15 +255,15 @@ body {
 
 /* Mobile spacing helpers */
 .mobile-spacer {
-  height: 3vh;
+  height: 2vh;
 }
 
 .mobile-spacer-large {
-  height: 6vh;
+  height: 4vh;
 }
 
 .mobile-spacer-extra {
-  height: 8vh;
+  height: 5vh;
 }
 
 @media (min-width: 768px) {

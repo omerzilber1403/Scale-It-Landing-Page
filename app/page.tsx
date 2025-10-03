@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <main className="snap-container">
+    <main className="relative">
       <Navbar lang={lang} onToggleLang={toggleLanguage} />
       
       {/* 🎨 Global Background Shapes - Good density throughout */}
