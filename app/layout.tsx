@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description: 'סוכנות דיגיטל מובילה בישראל. מתמחים בשיווק דיגיטלי, בניית אתרים וקידום עסקים ברשת.',
   keywords: ['שיווק דיגיטלי', 'בניית אתרים', 'קידום אתרים', 'SEO', 'digital marketing', 'Scale It'],
   authors: [{ name: 'Scale It Media' }],
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: 'Scale It — אסטרטגיות גדילה בדיגיטל',
     description: 'יוצרים למותגים מובילים אסטרטגיות גדילה בדיגיטל',
