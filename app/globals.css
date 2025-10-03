@@ -3,17 +3,19 @@
 @tailwind utilities;
 
 :root {
-  /* 💙 TECH BLUE - Muted Professional */
+  /* 💙 FINAL PERFECT - Bold Blue with Gray & Subtle Orange */
   --bg: #ffffff;
   --bg-secondary: #f8fafc;
   --fg: #0f172a;
   --fg-muted: #64748b;
-  --neon: #475569;
-  --neon-2: #64748b;
-  --accent: #94a3b8;
-  --electric: #cbd5e1;
-  --mint: #e2e8f0;
-  --border: rgba(71, 85, 105, 0.12);
+  --neon: #1e40af;
+  --neon-2: #2563eb;
+  --accent: #3b82f6;
+  --electric: #60a5fa;
+  --mint: #93c5fd;
+  --orange-accent: #fb923c;
+  --orange-subtle: #fed7aa;
+  --border: rgba(30, 64, 175, 0.12);
   
   /* Font stacks */
   --font-display: 'Space Grotesk', 'Heebo', system-ui, sans-serif;
@@ -55,30 +57,34 @@ body {
   position: relative;
 }
 
-/* 💙 Tech Glass Effect */
+/* 💙 Perfect Glass Effect with Subtle Orange */
 .glass {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(30, 64, 175, 0.15);
+  border-bottom: 2px solid rgba(251, 146, 60, 0.08);
   box-shadow: 
     0 4px 20px 0 rgba(30, 64, 175, 0.08),
     0 2px 10px 0 rgba(37, 99, 235, 0.05),
+    0 1px 3px 0 rgba(251, 146, 60, 0.03),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
 }
 
-/* 💙 Tech Blue Glow Effects */
+/* 💙 Perfect Blue Glow with Orange Hint */
 .neon-glow {
   box-shadow: 
-    0 4px 20px rgba(30, 64, 175, 0.2),
-    0 8px 35px rgba(37, 99, 235, 0.15);
+    0 4px 20px rgba(30, 64, 175, 0.25),
+    0 8px 35px rgba(37, 99, 235, 0.18),
+    0 2px 10px rgba(251, 146, 60, 0.08);
   animation: tech-pulse 3.5s ease-in-out infinite;
 }
 
 .neon-glow-subtle {
   box-shadow: 
-    0 2px 12px rgba(30, 64, 175, 0.12),
-    0 4px 20px rgba(37, 99, 235, 0.08);
+    0 2px 12px rgba(30, 64, 175, 0.15),
+    0 4px 20px rgba(37, 99, 235, 0.1),
+    0 1px 6px rgba(251, 146, 60, 0.05);
 }
 
 .neon-text-glow {
@@ -92,13 +98,15 @@ body {
 @keyframes tech-pulse {
   0%, 100% {
     box-shadow: 
-      0 4px 20px rgba(30, 64, 175, 0.2),
-      0 8px 35px rgba(37, 99, 235, 0.15);
+      0 4px 20px rgba(30, 64, 175, 0.25),
+      0 8px 35px rgba(37, 99, 235, 0.18),
+      0 2px 10px rgba(251, 146, 60, 0.08);
   }
   50% {
     box-shadow: 
-      0 6px 25px rgba(30, 64, 175, 0.28),
-      0 12px 45px rgba(37, 99, 235, 0.22);
+      0 6px 25px rgba(30, 64, 175, 0.32),
+      0 12px 45px rgba(37, 99, 235, 0.25),
+      0 3px 15px rgba(251, 146, 60, 0.12);
   }
 }
 
@@ -117,18 +125,19 @@ body {
   }
 }
 
-/* 💙 Tech Grid Pattern */
+/* 💙 Perfect Grid Pattern with Orange Hints */
 .grid-bg {
   background-image: 
     /* Dots pattern */
-    radial-gradient(circle, rgba(30, 64, 175, 0.08) 1px, transparent 1px),
-    radial-gradient(circle, rgba(37, 99, 235, 0.06) 1px, transparent 1px),
+    radial-gradient(circle, rgba(30, 64, 175, 0.09) 1px, transparent 1px),
+    radial-gradient(circle, rgba(37, 99, 235, 0.07) 1px, transparent 1px),
+    radial-gradient(circle, rgba(251, 146, 60, 0.03) 0.5px, transparent 0.5px),
     /* Tech gradients */
-    radial-gradient(ellipse at 20% 30%, rgba(30, 64, 175, 0.03) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 70%, rgba(37, 99, 235, 0.03) 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, 0.02) 0%, transparent 70%);
-  background-size: 30px 30px, 50px 50px, 100% 100%, 100% 100%, 100% 100%;
-  background-position: 0 0, 15px 15px, center, center, center;
+    radial-gradient(ellipse at 20% 30%, rgba(30, 64, 175, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(37, 99, 235, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(251, 146, 60, 0.02) 0%, transparent 70%);
+  background-size: 30px 30px, 50px 50px, 80px 80px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 15px 15px, 40px 40px, center, center, center;
   animation: ocean-flow 30s ease-in-out infinite;
 }
 
@@ -178,12 +187,16 @@ body {
   background: linear-gradient(180deg, #1e40af, #2563eb, #3b82f6);
   border-radius: 10px;
   border: 2px solid var(--bg);
-  box-shadow: 0 0 10px rgba(30, 64, 175, 0.3);
+  box-shadow: 
+    0 0 10px rgba(30, 64, 175, 0.35),
+    0 0 5px rgba(251, 146, 60, 0.1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #2563eb, #3b82f6, #60a5fa);
-  box-shadow: 0 0 15px rgba(30, 64, 175, 0.5);
+  box-shadow: 
+    0 0 15px rgba(30, 64, 175, 0.5),
+    0 0 8px rgba(251, 146, 60, 0.15);
 }
 
 /* Loading animation for images */
@@ -226,9 +239,10 @@ body {
 .hover-lift:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: 
-    0 20px 40px -12px rgba(30, 64, 175, 0.18),
-    0 12px 24px -8px rgba(37, 99, 235, 0.12),
-    0 0 30px rgba(59, 130, 246, 0.1);
+    0 20px 40px -12px rgba(30, 64, 175, 0.2),
+    0 12px 24px -8px rgba(37, 99, 235, 0.14),
+    0 0 30px rgba(59, 130, 246, 0.12),
+    0 4px 15px rgba(251, 146, 60, 0.06);
 }
 
 /* Floating animation */
