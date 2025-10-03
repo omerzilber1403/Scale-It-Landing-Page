@@ -364,7 +364,7 @@ body {
 
 /* Bubble Styles */
 .bubble {
-  position: fixed;
+  position: absolute;
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), transparent);
   backdrop-filter: blur(3px);
@@ -375,7 +375,7 @@ body {
 
 /* Cloud Styles */
 .cloud {
-  position: fixed;
+  position: absolute;
   background: linear-gradient(135deg, rgba(30, 64, 175, 0.12), rgba(37, 99, 235, 0.08));
   filter: blur(25px);
   pointer-events: none;
@@ -407,7 +407,7 @@ body {
 }
 
 .soft-ring {
-  position: fixed;
+  position: absolute;
   border-radius: 50%;
   border: 3px solid rgba(30, 64, 175, 0.15);
   border-top-color: transparent;
@@ -415,6 +415,146 @@ body {
   pointer-events: none;
   animation: ring-rotate 50s linear infinite;
   z-index: 1;
+}
+
+/* 🎲 3D Geometric Shapes */
+.shape-3d {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+/* 3D Cube */
+.cube-3d {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotate-3d-cube 20s linear infinite;
+}
+
+.cube-face {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.2), rgba(37, 99, 235, 0.15));
+  border: 2px solid rgba(30, 64, 175, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+/* 3D Triangle/Pyramid */
+.triangle-3d {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid rgba(30, 64, 175, 0.2);
+  position: absolute;
+  filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.3));
+  animation: rotate-wobble 15s ease-in-out infinite;
+}
+
+/* Diamond Shape */
+.diamond-3d {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.25), rgba(96, 165, 250, 0.15));
+  border: 2px solid rgba(30, 64, 175, 0.35);
+  transform: rotate(45deg);
+  position: absolute;
+  animation: bounce-rotate 12s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
+}
+
+/* Hexagon */
+.hexagon-3d {
+  width: 50px;
+  height: 29px;
+  background: rgba(30, 64, 175, 0.2);
+  border: 2px solid rgba(30, 64, 175, 0.3);
+  position: absolute;
+  animation: spin-float 18s ease-in-out infinite;
+}
+
+.hexagon-3d:before,
+.hexagon-3d:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  left: 0;
+}
+
+.hexagon-3d:before {
+  bottom: 100%;
+  border-bottom: 14.5px solid rgba(30, 64, 175, 0.2);
+}
+
+.hexagon-3d:after {
+  top: 100%;
+  border-top: 14.5px solid rgba(30, 64, 175, 0.2);
+}
+
+@keyframes rotate-3d-cube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-wobble {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(90deg) translateY(-20px);
+  }
+  50% {
+    transform: rotate(180deg) translateY(0);
+  }
+  75% {
+    transform: rotate(270deg) translateY(-20px);
+  }
+}
+
+@keyframes bounce-rotate {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0) scale(1);
+  }
+  25% {
+    transform: rotate(135deg) translateY(-30px) scale(1.1);
+  }
+  50% {
+    transform: rotate(225deg) translateY(0) scale(1);
+  }
+  75% {
+    transform: rotate(315deg) translateY(-30px) scale(1.1);
+  }
+}
+
+@keyframes spin-float {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0) translateX(0);
+  }
+  33% {
+    transform: rotate(120deg) translateY(-25px) translateX(20px);
+  }
+  66% {
+    transform: rotate(240deg) translateY(-10px) translateX(-20px);
+  }
+}
+
+@keyframes jump-spin {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+  }
 }
 
 /* 🎨 Gradient Orbs with Glow */
