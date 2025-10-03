@@ -18,82 +18,66 @@ export default function Hero({ lang }: HeroProps) {
       {/* Animated background grid */}
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
-      {/* 🌊 ELECTRIC BLUE ANIMATED ORBS */}
+      {/* 💎 Subtle Emerald Floating Orbs - Wiz inspired */}
       <motion.div
         animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.3, 0.5, 0.3],
-          x: [0, 50, 0],
-          y: [0, -30, 0],
+          scale: [1, 1.1, 1],
+          opacity: [0.15, 0.25, 0.15],
+          x: [0, 30, 0],
+          y: [0, -20, 0],
         }}
         transition={{
-          duration: 10,
+          duration: 18,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-sky-600 blur-3xl pointer-events-none"
+        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-emerald-200 via-teal-300 to-green-400 blur-3xl pointer-events-none opacity-40"
         aria-hidden="true"
       />
       <motion.div
         animate={{
-          scale: [1, 1.4, 1],
-          opacity: [0.25, 0.45, 0.25],
-          x: [0, -60, 0],
-          y: [0, 40, 0],
+          scale: [1, 1.15, 1],
+          opacity: [0.12, 0.22, 0.12],
+          x: [0, -40, 0],
+          y: [0, 25, 0],
         }}
         transition={{
-          duration: 12,
+          duration: 22,
           repeat: Infinity,
           ease: 'easeInOut',
-          delay: 2,
+          delay: 3,
         }}
-        className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full bg-gradient-to-br from-sky-400 via-cyan-500 to-blue-600 blur-3xl pointer-events-none"
+        className="absolute bottom-10 left-10 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-teal-200 via-emerald-300 to-green-300 blur-3xl pointer-events-none opacity-35"
         aria-hidden="true"
       />
       <motion.div
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2],
-          rotate: [0, 180, 360],
+          scale: [1, 1.08, 1],
+          opacity: [0.1, 0.18, 0.1],
+          x: [0, 20, 0],
+          y: [0, -15, 0],
         }}
         transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: 'linear',
-        }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-blue-300 via-cyan-400 to-sky-500 blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
-      <motion.div
-        animate={{
-          scale: [1, 1.25, 1],
-          opacity: [0.15, 0.35, 0.15],
-          x: [0, 40, 0],
-          y: [0, -40, 0],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 4,
-        }}
-        className="absolute top-1/4 right-1/3 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-cyan-300 via-sky-400 to-blue-500 blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
-      <motion.div
-        animate={{
-          scale: [1, 1.35, 1],
-          opacity: [0.2, 0.4, 0.2],
-          x: [0, -50, 0],
-          y: [0, 50, 0],
-        }}
-        transition={{
-          duration: 14,
+          duration: 25,
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 6,
         }}
-        className="absolute bottom-1/4 left-1/3 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-blue-400 via-cyan-500 to-sky-600 blur-3xl pointer-events-none"
+        className="absolute top-1/2 right-1/4 w-[450px] h-[450px] rounded-full bg-gradient-to-br from-green-200 via-emerald-200 to-teal-300 blur-3xl pointer-events-none opacity-30"
+        aria-hidden="true"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.12, 1],
+          opacity: [0.08, 0.16, 0.08],
+          rotate: [0, 90, 180],
+        }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+          ease: 'linear',
+        }}
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-emerald-100 via-teal-200 to-green-200 blur-3xl pointer-events-none opacity-25"
         aria-hidden="true"
       />
 
