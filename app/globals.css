@@ -30,7 +30,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -48,13 +47,17 @@ body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  position: relative;
 }
 
 .snap-section {
   scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: always;
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* 💙 Perfect Glass Effect with Subtle Orange */
