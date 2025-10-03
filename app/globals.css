@@ -326,26 +326,22 @@ body {
 }
 
 /* 🔷 Geometric Shapes - Bold & Colorful */
-@keyframes float-across-sections {
-  0% {
-    transform: translateY(0) rotate(0deg);
+@keyframes float-around {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
     opacity: 0.25;
   }
   25% {
-    transform: translateY(30vh) rotate(90deg);
+    transform: translate(30px, 40px) rotate(90deg);
     opacity: 0.35;
   }
   50% {
-    transform: translateY(60vh) rotate(180deg);
+    transform: translate(-20px, 80px) rotate(180deg);
     opacity: 0.3;
   }
   75% {
-    transform: translateY(90vh) rotate(270deg);
+    transform: translate(40px, 40px) rotate(270deg);
     opacity: 0.35;
-  }
-  100% {
-    transform: translateY(120vh) rotate(360deg);
-    opacity: 0.25;
   }
 }
 
@@ -361,7 +357,7 @@ body {
 }
 
 .geometric-shape {
-  position: fixed;
+  position: absolute;
   border: 4px solid;
   opacity: 0.3;
   pointer-events: none;
@@ -369,7 +365,7 @@ body {
 }
 
 .animate-float-sections {
-  animation: float-across-sections 40s linear infinite;
+  animation: float-around 40s ease-in-out infinite;
 }
 
 .animate-pulse-scale {
@@ -378,22 +374,22 @@ body {
 
 /* 🌀 Spiral Lines - Bold & Continuous */
 @keyframes spiral-travel {
-  0% {
-    transform: translateY(0) rotate(0deg) scale(1);
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
     opacity: 0.25;
   }
-  50% {
-    transform: translateY(50vh) rotate(720deg) scale(1.15);
-    opacity: 0.4;
+  33% {
+    transform: translate(40px, 30px) rotate(360deg) scale(1.1);
+    opacity: 0.35;
   }
-  100% {
-    transform: translateY(100vh) rotate(1440deg) scale(1);
-    opacity: 0.25;
+  66% {
+    transform: translate(-30px, 60px) rotate(720deg) scale(1.05);
+    opacity: 0.3;
   }
 }
 
 .spiral-line {
-  position: fixed;
+  position: absolute;
   width: 180px;
   height: 180px;
   border: 3px solid;

@@ -24,6 +24,11 @@ export default function Services({ lang }: ServicesProps) {
     <div className="relative min-h-screen flex items-center justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
       
+      {/* Decorative Shapes */}
+      <div className="geometric-shape w-36 h-36 animate-float-sections" style={{ top: '10%', right: '15%', borderColor: '#8b5cf6', animationDelay: '2s' }} aria-hidden="true" />
+      <div className="geometric-shape w-28 h-28 rounded-full animate-pulse-scale" style={{ bottom: '15%', left: '10%', borderColor: '#ec4899', animationDelay: '5s' }} aria-hidden="true" />
+      <div className="spiral-line" style={{ top: '20%', left: '20%', borderColor: '#06b6d4', animationDelay: '3s' }} aria-hidden="true" />
+      
       <motion.div
         ref={ref}
         initial={{ opacity: 0 }}

@@ -25,6 +25,11 @@ export default function Media({ lang }: MediaProps) {
   return (
     <div className="relative min-h-screen flex flex-col justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
+      
+      {/* Decorative Shapes */}
+      <div className="geometric-shape w-32 h-32 animate-float-sections" style={{ top: '8%', left: '12%', borderColor: '#10b981', animationDelay: '4s' }} aria-hidden="true" />
+      <div className="geometric-shape w-40 h-40 animate-pulse-scale" style={{ bottom: '10%', right: '8%', borderColor: '#f59e0b', animationDelay: '1s' }} aria-hidden="true" />
+      <div className="spiral-line" style={{ top: '50%', right: '18%', borderColor: '#ef4444', animationDelay: '6s' }} aria-hidden="true" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto w-full">
         <motion.h2

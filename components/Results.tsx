@@ -19,6 +19,11 @@ export default function Results({ lang }: ResultsProps) {
     <div className="relative min-h-screen flex items-center justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
+      {/* Decorative Shapes */}
+      <div className="geometric-shape w-36 h-36 rounded-full animate-pulse-scale" style={{ top: '12%', right: '10%', borderColor: '#3b82f6', animationDelay: '3s' }} aria-hidden="true" />
+      <div className="geometric-shape w-32 h-32 animate-float-sections" style={{ bottom: '18%', left: '15%', borderColor: '#14b8a6', animationDelay: '7s' }} aria-hidden="true" />
+      <div className="spiral-line" style={{ top: '35%', left: '8%', borderColor: '#8b5cf6', animationDelay: '9s' }} aria-hidden="true" />
+      
       <motion.div
         ref={ref}
         initial={{ opacity: 0 }}
