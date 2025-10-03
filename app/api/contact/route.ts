@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only if API key is available
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function POST(request: Request) {
   try {
@@ -26,9 +27,10 @@ export async function POST(request: Request) {
       timestamp: new Date().toISOString(),
     });
 
-    // Send email using Resend
-    try {
-      await resend.emails.send({
+    // Send email using Resend (only if configured)
+    if (resend) {
+      try {
+        await resend.emails.send({
         from: 'Scale It Contact <onboarding@resend.dev>', // Use your verified domain later
         to: 'benlenderman2@gmail.com',
         subject: `🚀 New Contact Form: ${name}${company ? ` from ${company}` : ''}`,
@@ -87,10 +89,13 @@ export async function POST(request: Request) {
             </body>
           </html>
         `,
-      });
-    } catch (emailError) {
-      console.error('Email sending error:', emailError);
-      // Still return success to user even if email fails (you'll see it in logs)
+        });
+      } catch (emailError) {
+        console.error('Email sending error:', emailError);
+        // Still return success to user even if email fails (you'll see it in logs)
+      }
+    } else {
+      console.log('Resend not configured. Email would be sent to: benlenderman2@gmail.com');
     }
 
     return NextResponse.json(
