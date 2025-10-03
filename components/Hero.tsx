@@ -18,66 +18,66 @@ export default function Hero({ lang }: HeroProps) {
       {/* Animated background grid */}
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
-      {/* 💎 Subtle Emerald Floating Orbs - Wiz inspired */}
+      {/* 🎨 Vibrant Floating Orbs - Wiz Style */}
       <motion.div
         animate={{
           scale: [1, 1.1, 1],
-          opacity: [0.15, 0.25, 0.15],
+          opacity: [0.2, 0.35, 0.2],
           x: [0, 30, 0],
-          y: [0, -20, 0],
+          y: [0, -25, 0],
         }}
         transition={{
-          duration: 18,
+          duration: 16,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-emerald-200 via-teal-300 to-green-400 blur-3xl pointer-events-none opacity-40"
+        className="absolute top-10 right-10 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-indigo-300 via-purple-400 to-pink-300 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
       <motion.div
         animate={{
           scale: [1, 1.15, 1],
-          opacity: [0.12, 0.22, 0.12],
-          x: [0, -40, 0],
-          y: [0, 25, 0],
+          opacity: [0.18, 0.3, 0.18],
+          x: [0, -35, 0],
+          y: [0, 30, 0],
         }}
         transition={{
-          duration: 22,
+          duration: 20,
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 3,
         }}
-        className="absolute bottom-10 left-10 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-teal-200 via-emerald-300 to-green-300 blur-3xl pointer-events-none opacity-35"
+        className="absolute bottom-20 left-10 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-purple-300 via-fuchsia-400 to-pink-400 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
       <motion.div
         animate={{
           scale: [1, 1.08, 1],
-          opacity: [0.1, 0.18, 0.1],
-          x: [0, 20, 0],
-          y: [0, -15, 0],
+          opacity: [0.15, 0.28, 0.15],
+          x: [0, 25, 0],
+          y: [0, -20, 0],
         }}
         transition={{
-          duration: 25,
+          duration: 24,
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 6,
         }}
-        className="absolute top-1/2 right-1/4 w-[450px] h-[450px] rounded-full bg-gradient-to-br from-green-200 via-emerald-200 to-teal-300 blur-3xl pointer-events-none opacity-30"
+        className="absolute top-1/3 right-1/4 w-[450px] h-[450px] rounded-full bg-gradient-to-br from-cyan-300 via-blue-400 to-indigo-400 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
       <motion.div
         animate={{
           scale: [1, 1.12, 1],
-          opacity: [0.08, 0.16, 0.08],
-          rotate: [0, 90, 180],
+          opacity: [0.12, 0.25, 0.12],
+          rotate: [0, 120, 240],
         }}
         transition={{
-          duration: 40,
+          duration: 35,
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-emerald-100 via-teal-200 to-green-200 blur-3xl pointer-events-none opacity-25"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-300 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
 

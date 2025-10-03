@@ -34,31 +34,49 @@ export default function Home() {
     <main className="relative">
       <Navbar lang={lang} onToggleLang={toggleLanguage} />
 
-      {/* Scroll snap container */}
-      <div className="snap-container">
-        <section id="hero" className="snap-section">
+      {/* Sections with better mobile spacing */}
+      <div>
+        <section id="hero" className="min-h-screen pt-16 md:pt-0">
           <Hero lang={lang} />
         </section>
 
-        <section id="services" className="snap-section">
+        {/* Mobile Spacer */}
+        <div className="mobile-spacer" />
+
+        <section id="services" className="min-h-screen py-12 md:py-0">
           <Services lang={lang} />
         </section>
 
-        <section id="why-us" className="snap-section">
+        {/* Mobile Spacer */}
+        <div className="mobile-spacer" />
+
+        <section id="why-us" className="min-h-screen py-12 md:py-0">
           <WhyUs lang={lang} />
         </section>
 
-        <section id="media" className="snap-section">
+        {/* Mobile Spacer */}
+        <div className="mobile-spacer" />
+
+        <section id="media" className="min-h-screen py-12 md:py-0">
           <Media lang={lang} />
         </section>
 
-        <section id="results" className="snap-section">
+        {/* Mobile Spacer */}
+        <div className="mobile-spacer" />
+
+        <section id="results" className="min-h-screen py-12 md:py-0">
           <Results lang={lang} />
         </section>
 
-        <section id="contact" className="snap-section">
+        {/* Mobile Spacer */}
+        <div className="mobile-spacer" />
+
+        <section id="contact" className="min-h-screen py-12 md:py-0">
           <Contact lang={lang} />
         </section>
+
+        {/* Final Mobile Spacer */}
+        <div className="mobile-spacer" />
       </div>
 
     </main>
