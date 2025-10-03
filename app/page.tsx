@@ -81,6 +81,7 @@ export default function Home() {
         </section>
 
         {/* Mobile Spacers after Hero */}
+        <div className="mobile-spacer-extra" />
         <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
@@ -89,6 +90,7 @@ export default function Home() {
         </section>
 
         {/* Mobile Spacers */}
+        <div className="mobile-spacer-extra" />
         <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
@@ -97,6 +99,7 @@ export default function Home() {
         </section>
 
         {/* Mobile Spacers */}
+        <div className="mobile-spacer-extra" />
         <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
@@ -105,6 +108,7 @@ export default function Home() {
         </section>
 
         {/* Mobile Spacers */}
+        <div className="mobile-spacer-extra" />
         <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
@@ -113,6 +117,7 @@ export default function Home() {
         </section>
 
         {/* Mobile Spacers */}
+        <div className="mobile-spacer-extra" />
         <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 
@@ -121,6 +126,7 @@ export default function Home() {
         </section>
 
         {/* Final Mobile Spacers */}
+        <div className="mobile-spacer-extra" />
         <div className="mobile-spacer-large" />
         <div className="mobile-spacer" />
 

@@ -134,27 +134,27 @@ export const translations: Record<Lang, Translations> = {
       header: 'איך אנחנו עוזרים לכם לצמוח?',
       cmo: {
         title: 'סמנכ"ל שיווק חיצוני CMO',
-        description: 'אחד הבידולים המרכזיים שלנו הוא היכולת לספק לכם סמנכ"ל שיווק במיקור חוץ (CMO). אנחנו לא חלק מהחברה, אבל עובדים בצמוד אליכם – משתתפים בישיבות חשובות, מכירים את בעלי התפקידים, בונים אסטרטגיה ותכנון מסע לקוח, ומוודאים שהיעדים מושגים. ההצלחה שלכם היא גם ההצלחה שלנו, וביחד נוביל את העסק לצמיחה.',
+        description: '**הסמנכ"ל שלכם במיקור חוץ**\n\nאחד הבידולים המרכזיים שלנו הוא היכולת לספק לכם סמנכ"ל שיווק במיקור חוץ (CMO). אנחנו לא חלק מהחברה, אבל עובדים בצמוד אליכם:\n\n• משתתפים בישיבות חשובות\n• מכירים את כל בעלי התפקידים\n• בונים אסטרטגיה ותכנון מסע לקוח\n• מוודאים שהיעדים מושגים\n\n**ההצלחה שלכם = ההצלחה שלנו**',
       },
       campaigns: {
         title: 'ניהול קמפיינים',
-        description: 'אנחנו לא רק מנהלי קמפיינים – אנחנו מנהלי שיווק. אנחנו מבינים את הצרכים של הקהל שלכם, יודעים לספר סיפור נכון, מייצרים תוכן מדויק לקמפיינים אפקטיביים, ועושים את זה בהצלחה עם עשרות עסקים',
+        description: '**מנהלי שיווק, לא רק קמפיינים**\n\nאנחנו לא רק מנהלי קמפיינים – אנחנו מנהלי שיווק.\n\n**מה אנחנו עושים?**\n\n• מבינים את הצרכים של הקהל שלכם\n• יודעים לספר סיפור נכון\n• מייצרים תוכן מדויק לקמפיינים אפקטיביים\n• עושים את זה בהצלחה עם עשרות עסקים',
       },
       websites: {
         title: 'בניית אתרים וקידום',
-        description: 'עבורנו אתר טוב הוא הרבה מעבר לנראות. אתר הוא הכלי המרכזי שמרכז את החוויה הדיגיטלית של הלקוח מול המותג, ולכן הוא חייב להיות מתוכנן קודם כל סביב צרכי המשתמש – להבין מה מניע אותו, מה חשוב לו, ואיך הוא מקבל החלטות. עיצוב יפה הוא רק השכבה החיצונית; מאחוריו חייב לעמוד אפיון אסטרטגי שממקד את הגולש, מייצר עבורו חוויה ברורה, ומוביל אותו צעד אחר צעד אל ההמרה.',
+        description: '**אתר = הכלי המרכזי שלכם**\n\nעבורנו אתר טוב הוא הרבה מעבר לנראות. אתר הוא הכלי המרכזי שמרכז את החוויה הדיגיטלית של הלקוח מול המותג.\n\n**מה חשוב באתר?**\n\n• מתוכנן סביב צרכי המשתמש\n• מבין מה מניע את הלקוח\n• יוצר חוויה ברורה ומובנת\n• מוביל צעד אחר צעד להמרה\n\n**עיצוב יפה + אפיון אסטרטגי**',
       },
       video: {
         title: 'הפקות וידאו',
-        description: 'אנחנו מתמחים ביצירת תוכן ויזואלי מקצה לקצה – מסרטוני תדמית ופרסומות ועד צילומי כנסים, אירועים ופודקאסטים. צילום טוב מתחיל בתסריט וקונספט יצירתי שמתחברים לקהל, וממשיך בציוד מתקדם וצוות מקצועי שמקפיד על כל פריים. בחדר העריכה אנחנו מוסיפים צבע, סאונד ואפקטים ליצירת חוויה מלאה. התוצאה – תוכן חד, מרגש ומדויק שמחזק את המותג, מגדיל מכירות ובונה נוכחות בלתי נשכחת ברשת.',
+        description: '**תוכן ויזואלי מקצה לקצה**\n\nאנחנו מתמחים ביצירת תוכן ויזואלי מקצה לקצה:\n\n• סרטוני תדמית ופרסומות\n• צילומי כנסים ואירועים\n• פודקאסטים מקצועיים\n\n**התהליך שלנו:**\n\n• תסריט וקונספט יצירתי שמתחבר לקהל\n• ציוד מתקדם וצוות מקצועי\n• עריכה עם צבע, סאונד ואפקטים\n\nהתוצאה? תוכן חד, מרגש ומדויק שמחזק את המותג ובונה נוכחות בלתי נשכחת.',
       },
       seo: {
         title: 'קידום אתרים SEO',
-        description: 'קידום אתרים אורגני (SEO) הוא אחד הכלים החזקים ביותר לייצור תוצאות יציבות וארוכות טווח. אתר שמדורג גבוה בגוגל לא רק מושך יותר תנועה – הוא גם מייצר אמון ומבסס את המותג שלכם כמוביל בתחומו. העבודה שלנו מבוססת על מתודולוגיה ברורה: מחקר מילים מעמיק, אופטימיזציה טכנית, יצירת תוכן איכותי ובניית קישורים נכונה. כל צעד נבדק, נמדד ומבוקר – כדי להבטיח שהאתר שלכם לא רק יופיע בתוצאות החיפוש, אלא גם ימשוך את הקהל המדויק וימיר אותו ללקוחות.',
+        description: '**SEO = תוצאות יציבות וארוכות טווח**\n\nקידום אתרים אורגני (SEO) הוא אחד הכלים החזקים ביותר לייצור תוצאות יציבות וארוכות טווח.\n\n**למה זה חשוב?**\n\nאתר מדורג גבוה בגוגל = יותר תנועה + יותר אמון\n\n**המתודולוגיה שלנו:**\n\n• מחקר מילים מעמיק\n• אופטימיזציה טכנית\n• יצירת תוכן איכותי\n• בניית קישורים נכונה\n\n**כל צעד נבדק, נמדד ומבוקר!**',
       },
       social: {
         title: 'ניהול רשתות חברתיות',
-        description: 'צוות הסושיאל שלנו מנהל עבורכם את כל הנוכחות ברשתות החברתיות – החל מכתיבת פוסטים ותזמון חכם, דרך צילום ועריכה ברמה גבוהה, ועד התאמת התוכן לכל פלטפורמה. המטרה שלנו ברורה: לא רק "להיות שם", אלא לבנות סביבכם קהילה חיה ונושמת שמתחברת למותג, יוצרת מעורבות, ומובילה לצמיחה אמיתית.',
+        description: '**נוכחות מלאה ברשתות החברתיות**\n\nצוות הסושיאל שלנו מנהל עבורכם את כל הנוכחות ברשתות החברתיות:\n\n• כתיבת פוסטים ותזמון חכם\n• צילום ועריכה ברמה גבוהה\n• התאמת תוכן לכל פלטפורמה\n\n**המטרה שלנו:**\n\nלא רק "להיות שם" - לבנות קהילה חיה!\n\n• מתחברת למותג\n• יוצרת מעורבות\n• מובילה לצמיחה אמיתית',
       },
     },
     media: {
@@ -237,27 +237,27 @@ export const translations: Record<Lang, Translations> = {
       header: 'How We Help You Grow?',
       cmo: {
         title: 'Outsourced CMO',
-        description: 'One of our key differentiators is the ability to provide you with an outsourced Chief Marketing Officer (CMO). We are not part of the company, but work closely with you – participating in important meetings, knowing the stakeholders, building strategy and customer journey planning, and ensuring goals are achieved. Your success is our success, and together we will lead the business to growth.',
+        description: '**Your Outsourced CMO**\n\nOne of our key differentiators is the ability to provide you with an outsourced Chief Marketing Officer (CMO). We are not part of the company, but work closely with you:\n\n• Participate in important meetings\n• Know all stakeholders\n• Build strategy and customer journey planning\n• Ensure goals are achieved\n\n**Your Success = Our Success**',
       },
       campaigns: {
         title: 'Campaign Management',
-        description: "We're not just campaign managers – we're marketing managers. We understand your audience's needs, know how to tell the right story, create precise content for effective campaigns, and do it successfully with dozens of businesses",
+        description: "**Marketing Managers, Not Just Campaign Managers**\n\nWe're not just campaign managers – we're marketing managers.\n\n**What we do?**\n\n• Understand your audience's needs\n• Know how to tell the right story\n• Create precise content for effective campaigns\n• Do it successfully with dozens of businesses",
       },
       websites: {
         title: 'Website Development & Promotion',
-        description: 'For us, a good website is much more than appearance. A website is the central tool that centralizes the digital experience of the customer with the brand, and therefore it must be planned first and foremost around user needs – understand what drives them, what matters to them, and how they make decisions. Beautiful design is just the outer layer; behind it must stand strategic specification that focuses the visitor, creates a clear experience for them, and leads them step by step to conversion.',
+        description: '**Website = Your Central Tool**\n\nFor us, a good website is much more than appearance. A website is the central tool that centralizes the digital experience of the customer with the brand.\n\n**What matters in a website?**\n\n• Planned around user needs\n• Understand what drives the customer\n• Create clear and understandable experience\n• Lead step by step to conversion\n\n**Beautiful design + strategic specification**',
       },
       video: {
         title: 'Video Production',
-        description: "We specialize in creating visual content end-to-end – from brand videos and commercials to conference, event and podcast shoots. Good filming starts with a script and creative concept that connect with the audience, and continues with advanced equipment and a professional team that pays attention to every frame. In the editing room we add color, sound and effects to create a complete experience. The result – sharp, emotional and precise content that strengthens the brand, increases sales and builds an unforgettable presence online.",
+        description: '**End-to-End Visual Content**\n\nWe specialize in creating visual content end-to-end:\n\n• Brand videos and commercials\n• Conference and event shoots\n• Professional podcasts\n\n**Our Process:**\n\n• Script and creative concept that connects with the audience\n• Advanced equipment and professional team\n• Editing with color, sound and effects\n\nThe result? Sharp, emotional and precise content that strengthens the brand and builds an unforgettable presence.',
       },
       seo: {
         title: 'SEO - Search Engine Optimization',
-        description: 'Organic search engine optimization (SEO) is one of the most powerful tools for generating stable, long-term results. A website that ranks high on Google not only attracts more traffic – it also generates trust and establishes your brand as a leader in its field. Our work is based on a clear methodology: in-depth keyword research, technical optimization, quality content creation and proper link building. Every step is tested, measured and monitored – to ensure that your site not only appears in search results, but also attracts the precise audience and converts them into customers.',
+        description: '**SEO = Stable, Long-term Results**\n\nOrganic search engine optimization (SEO) is one of the most powerful tools for generating stable, long-term results.\n\n**Why is this important?**\n\nHigh Google ranking = More traffic + More trust\n\n**Our Methodology:**\n\n• In-depth keyword research\n• Technical optimization\n• Quality content creation\n• Proper link building\n\n**Every step tested, measured and monitored!**',
       },
       social: {
         title: 'Social Media Management',
-        description: 'Our social media team manages your entire social media presence – from writing posts and smart scheduling, through high-level photography and editing, to adapting content for each platform. Our goal is clear: not just "being there", but building a living, breathing community around you that connects with the brand, creates engagement, and leads to real growth.',
+        description: '**Complete Social Media Presence**\n\nOur social media team manages your entire social media presence:\n\n• Post writing and smart scheduling\n• High-level photography and editing\n• Content adaptation for each platform\n\n**Our Goal:**\n\nNot just "being there" - building a living community!\n\n• Connects with the brand\n• Creates engagement\n• Leads to real growth',
       },
     },
     media: {

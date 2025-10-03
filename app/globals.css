@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,9 +19,9 @@
   --orange-subtle: #fed7aa;
   --border: rgba(30, 64, 175, 0.12);
   
-  /* Font stacks */
-  --font-display: 'Space Grotesk', 'Heebo', system-ui, sans-serif;
-  --font-body: 'Inter', 'Heebo', system-ui, sans-serif;
+  /* Font stacks - Heebo מחליף את Ploni (דומה מאוד) */
+  --font-display: 'Heebo', system-ui, sans-serif;
+  --font-body: 'Heebo', system-ui, sans-serif;
 }
 
 * {
@@ -58,6 +60,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Weaker scroll snap on mobile */
+@media (max-width: 767px) {
+  .snap-container {
+    scroll-snap-type: y proximity;
+  }
+  
+  .snap-section {
+    scroll-snap-stop: normal;
+  }
 }
 
 /* Footer section - allow scrolling past it */
@@ -233,16 +246,21 @@ body {
 
 /* Mobile spacing helpers */
 .mobile-spacer {
-  height: 8vh;
+  height: 3vh;
 }
 
 .mobile-spacer-large {
-  height: 12vh;
+  height: 6vh;
+}
+
+.mobile-spacer-extra {
+  height: 8vh;
 }
 
 @media (min-width: 768px) {
   .mobile-spacer,
-  .mobile-spacer-large {
+  .mobile-spacer-large,
+  .mobile-spacer-extra {
     display: none;
   }
 }
@@ -259,6 +277,50 @@ body {
     0 12px 24px -8px rgba(37, 99, 235, 0.14),
     0 0 30px rgba(59, 130, 246, 0.12),
     0 4px 15px rgba(251, 146, 60, 0.06);
+}
+
+/* Enhanced card hover effects */
+.card-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 50px -12px rgba(30, 64, 175, 0.25),
+    0 15px 30px -8px rgba(37, 99, 235, 0.18),
+    0 0 40px rgba(59, 130, 246, 0.15),
+    0 6px 20px rgba(251, 146, 60, 0.08);
+}
+
+/* Staggered animation for cards */
+@keyframes cardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-animate {
+  animation: cardSlideIn 0.6s ease-out forwards;
+}
+
+/* Icon pulse effect */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.icon-pulse {
+  animation: iconPulse 2s ease-in-out infinite;
 }
 
 /* Floating animation */

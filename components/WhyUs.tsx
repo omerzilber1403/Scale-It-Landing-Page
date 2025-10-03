@@ -1,7 +1,8 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import { getTranslations, Lang } from '@/lib/i18n';
 
 interface WhyUsProps {
@@ -12,6 +13,7 @@ export default function WhyUs({ lang }: WhyUsProps) {
   const t = getTranslations(lang);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const [openIndex, setOpenIndex] = useState<number>(0);
 
   const items = [
     t.whyUs.cmo,
@@ -22,6 +24,10 @@ export default function WhyUs({ lang }: WhyUsProps) {
     t.whyUs.social,
   ];
 
+  const toggleItem = (index: number) => {
+    setOpenIndex(openIndex === index ? -1 : index);
+  };
+
   return (
     <div className="relative min-h-screen flex items-center justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
@@ -31,28 +37,113 @@ export default function WhyUs({ lang }: WhyUsProps) {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-6xl mx-auto"
+        className="relative z-10 max-w-4xl mx-auto"
       >
-        <motion.h2
+        {/* Header */}
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-12 text-center text-neon neon-text-glow"
+          className="text-center mb-12"
         >
-          {t.whyUs.header}
-        </motion.h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 text-neon neon-text-glow">
+            {t.whyUs.header}
+          </h2>
+          <p className="text-lg text-fg-muted">
+            {lang === 'he' ? 'לחץ לפתיחה' : 'Click to expand'}
+          </p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Accordion */}
+        <div className="space-y-4">
           {items.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className="glass rounded-2xl p-8 hover:border-neon/50 transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
             >
-              <h3 className="text-2xl font-bold text-neon-2 mb-4">{item.title}</h3>
-              <p className="text-lg text-fg-muted leading-relaxed">{item.description}</p>
+              <div className={`glass rounded-2xl overflow-hidden transition-all duration-300 ${
+                openIndex === index ? 'shadow-lg shadow-neon/20 border-neon/40' : 'border-neon/20'
+              }`}>
+                {/* Header Button */}
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full flex items-center justify-between p-6 text-left hover:bg-neon/5 transition-colors duration-200"
+                >
+                  <div className="flex items-center gap-4 flex-1">
+                    {/* Number Badge */}
+                    <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all duration-300 ${
+                      openIndex === index 
+                        ? 'bg-gradient-to-r from-neon to-neon-2 text-white scale-110' 
+                        : 'bg-neon/10 text-neon'
+                    }`}>
+                      {index + 1}
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${
+                      openIndex === index ? 'text-neon' : 'text-neon-2'
+                    }`}>
+                      {item.title}
+                    </h3>
+                  </div>
+                  
+                  {/* Arrow Icon */}
+                  <ChevronDown 
+                    className={`flex-shrink-0 w-6 h-6 text-neon transition-transform duration-300 ${
+                      openIndex === index ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+
+                {/* Content */}
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    >
+                      <div className="px-6 pb-6 pt-2">
+                        <div className="pl-14">
+                          <div className="text-base md:text-lg text-fg-muted leading-relaxed space-y-3">
+                            {item.description.split('\n').map((line, lineIndex) => {
+                              // Bold headers
+                              if (line.startsWith('**') && line.endsWith('**')) {
+                                return (
+                                  <div key={lineIndex} className="font-bold text-neon text-lg mt-4 first:mt-0">
+                                    {line.replace(/\*\*/g, '')}
+                                  </div>
+                                );
+                              }
+                              // Bullet points
+                              if (line.startsWith('•')) {
+                                return (
+                                  <div key={lineIndex} className="flex items-start gap-3">
+                                    <span className="text-neon-2 mt-1">•</span>
+                                    <span className="flex-1">{line.substring(2)}</span>
+                                  </div>
+                                );
+                              }
+                              // Regular text
+                              if (line.trim()) {
+                                return (
+                                  <div key={lineIndex}>
+                                    {line}
+                                  </div>
+                                );
+                              }
+                              return null;
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </motion.div>
           ))}
         </div>
