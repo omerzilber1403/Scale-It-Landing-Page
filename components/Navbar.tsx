@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronUp } from 'lucide-react';
+import { ChevronUp, MessageSquare, PlayCircle } from 'lucide-react';
 import { Lang } from '@/lib/i18n';
 import LangToggle from './LangToggle';
 
@@ -113,8 +113,26 @@ export default function Navbar({ lang, onToggleLang }: NavbarProps) {
             <LangToggle lang={lang} onToggle={onToggleLang} />
           </div>
 
-          {/* Mobile Lang Toggle */}
-          <div className="md:hidden">
+          {/* Mobile Quick Actions + Lang Toggle */}
+          <div className="md:hidden flex items-center gap-3">
+            {/* Media Icon */}
+            <button
+              onClick={() => scrollToSection('media')}
+              className="w-9 h-9 rounded-full bg-gradient-to-r from-neon/10 to-neon-2/10 border border-neon/30 flex items-center justify-center hover:scale-110 transition-transform"
+              aria-label={lang === 'he' ? 'מדיה' : 'Media'}
+            >
+              <PlayCircle size={18} className="text-neon" />
+            </button>
+            
+            {/* Contact Icon */}
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="w-9 h-9 rounded-full bg-gradient-to-r from-neon to-neon-2 flex items-center justify-center neon-glow-subtle hover:scale-110 transition-transform"
+              aria-label={lang === 'he' ? 'צור קשר' : 'Contact'}
+            >
+              <MessageSquare size={18} className="text-white" />
+            </button>
+            
             <LangToggle lang={lang} onToggle={onToggleLang} />
           </div>
         </div>

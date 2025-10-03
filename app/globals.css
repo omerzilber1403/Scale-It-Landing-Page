@@ -203,7 +203,7 @@ body {
 
 /* Mobile spacing helpers */
 .mobile-spacer {
-  height: 10vh;
+  height: 5vh;
 }
 
 @media (min-width: 768px) {
