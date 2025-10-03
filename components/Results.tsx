@@ -19,30 +19,6 @@ export default function Results({ lang }: ResultsProps) {
     <div className="relative min-h-screen flex items-center justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
-      {/* 🎲 3D Geometric Shapes - Blue */}
-      <div className="cube-3d" style={{ top: '18%', right: '16%', animationDelay: '3s', animationDuration: '23s' }} aria-hidden="true" />
-      <div className="cube-3d" style={{ bottom: '28%', left: '18%', animationDelay: '10s' }} aria-hidden="true" />
-      
-      <div className="triangle-3d" style={{ top: '42%', left: '10%', animationDelay: '6s' }} aria-hidden="true" />
-      <div className="triangle-3d" style={{ bottom: '32%', right: '22%', animationDelay: '13s', animationDuration: '16s' }} aria-hidden="true" />
-      
-      <div className="diamond-3d" style={{ top: '28%', left: '26%', animationDelay: '4s' }} aria-hidden="true" />
-      <div className="diamond-3d" style={{ top: '72%', right: '20%', animationDelay: '14s', animationDuration: '15s' }} aria-hidden="true" />
-      
-      <div className="hexagon-3d" style={{ top: '54%', right: '34%', animationDelay: '8s' }} aria-hidden="true" />
-      <div className="hexagon-3d" style={{ bottom: '48%', left: '40%', animationDelay: '16s', animationDuration: '20s' }} aria-hidden="true" />
-      
-      {/* 🟢 Green Physics Shapes */}
-      <div className="star-3d" style={{ top: '26%', left: '38%', animationDelay: '5s', animationDuration: '11s' }} aria-hidden="true" />
-      <div className="star-3d" style={{ bottom: '36%', right: '28%', animationDelay: '12s' }} aria-hidden="true" />
-      
-      {/* 🟠 Orange Physics Shapes */}
-      <div className="circle-3d" style={{ top: '64%', right: '14%', animationDelay: '7s', animationDuration: '15s' }} aria-hidden="true" />
-      <div className="circle-3d" style={{ bottom: '44%', left: '26%', animationDelay: '11s' }} aria-hidden="true" />
-      
-      <div className="pentagon-3d" style={{ top: '48%', left: '14%', animationDelay: '9s', animationDuration: '17s' }} aria-hidden="true" />
-      <div className="pentagon-3d" style={{ bottom: '16%', right: '36%', animationDelay: '15s' }} aria-hidden="true" />
-      
       {/* ☁️ Soft Clouds for depth */}
       <div className="cloud w-70 h-54 animate-cloud-drift" style={{ top: '32%', left: '12%', animationDelay: '9s' }} aria-hidden="true" />
       <div className="cloud w-62 h-46 animate-cloud-drift" style={{ bottom: '26%', right: '24%', animationDelay: '17s' }} aria-hidden="true" />

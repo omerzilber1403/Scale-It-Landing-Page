@@ -33,30 +33,6 @@ export default function Hero({ lang }: HeroProps) {
         />
       ))}
       
-      {/* 🎲 3D Geometric Shapes - Blue */}
-      <div className="cube-3d" style={{ top: '10%', right: '15%', animationDelay: '0s' }} aria-hidden="true" />
-      <div className="cube-3d" style={{ bottom: '25%', left: '12%', animationDelay: '8s', animationDuration: '25s' }} aria-hidden="true" />
-      
-      <div className="triangle-3d" style={{ top: '40%', left: '8%', animationDelay: '4s' }} aria-hidden="true" />
-      <div className="triangle-3d" style={{ bottom: '30%', right: '20%', animationDelay: '10s', animationDuration: '18s' }} aria-hidden="true" />
-      
-      <div className="diamond-3d" style={{ top: '20%', left: '25%', animationDelay: '2s' }} aria-hidden="true" />
-      <div className="diamond-3d" style={{ top: '65%', right: '15%', animationDelay: '12s', animationDuration: '14s' }} aria-hidden="true" />
-      
-      <div className="hexagon-3d" style={{ top: '30%', right: '35%', animationDelay: '5s' }} aria-hidden="true" />
-      <div className="hexagon-3d" style={{ bottom: '40%', left: '35%', animationDelay: '14s', animationDuration: '20s' }} aria-hidden="true" />
-      
-      {/* 🟢 Green Physics Shapes */}
-      <div className="star-3d" style={{ top: '18%', left: '38%', animationDelay: '3s' }} aria-hidden="true" />
-      <div className="star-3d" style={{ bottom: '45%', right: '28%', animationDelay: '11s', animationDuration: '12s' }} aria-hidden="true" />
-      
-      {/* 🟠 Orange Physics Shapes */}
-      <div className="circle-3d" style={{ top: '55%', right: '10%', animationDelay: '6s', animationDuration: '15s' }} aria-hidden="true" />
-      <div className="circle-3d" style={{ bottom: '15%', left: '40%', animationDelay: '13s' }} aria-hidden="true" />
-      
-      <div className="pentagon-3d" style={{ top: '75%', left: '18%', animationDelay: '9s', animationDuration: '17s' }} aria-hidden="true" />
-      <div className="pentagon-3d" style={{ top: '45%', right: '8%', animationDelay: '16s' }} aria-hidden="true" />
-      
       {/* ☁️ Soft Clouds for depth */}
       <div className="cloud w-64 h-48 animate-cloud-drift" style={{ top: '12%', left: '20%', animationDelay: '2s' }} aria-hidden="true" />
       <div className="cloud w-80 h-56 animate-cloud-drift" style={{ bottom: '20%', right: '15%', animationDelay: '8s', animationDuration: '50s' }} aria-hidden="true" />

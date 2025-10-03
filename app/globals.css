@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  /* 💙 TECH BLUE - Professional Hi-Tech */
+  /* 💙 TECH BLUE - Muted Professional */
   --bg: #ffffff;
   --bg-secondary: #f8fafc;
   --fg: #0f172a;
-  --fg-muted: #475569;
-  --neon: #1e40af;
-  --neon-2: #2563eb;
-  --accent: #3b82f6;
-  --electric: #60a5fa;
-  --mint: #93c5fd;
-  --border: rgba(30, 64, 175, 0.12);
+  --fg-muted: #64748b;
+  --neon: #475569;
+  --neon-2: #64748b;
+  --accent: #94a3b8;
+  --electric: #cbd5e1;
+  --mint: #e2e8f0;
+  --border: rgba(71, 85, 105, 0.12);
   
   /* Font stacks */
   --font-display: 'Space Grotesk', 'Heebo', system-ui, sans-serif;
@@ -429,17 +429,18 @@ body {
 .cube-3d {
   width: 60px;
   height: 60px;
-  position: absolute;
+  position: fixed;
   transform-style: preserve-3d;
   animation: rotate-3d-cube 20s linear infinite;
+  z-index: 1;
 }
 
 .cube-face {
   position: absolute;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.2), rgba(37, 99, 235, 0.15));
-  border: 2px solid rgba(30, 64, 175, 0.3);
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.15), rgba(100, 116, 139, 0.1));
+  border: 2px solid rgba(71, 85, 105, 0.2);
   backdrop-filter: blur(4px);
 }
 
@@ -449,32 +450,35 @@ body {
   height: 0;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
-  border-bottom: 70px solid rgba(30, 64, 175, 0.2);
-  position: absolute;
-  filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.3));
+  border-bottom: 70px solid rgba(71, 85, 105, 0.15);
+  position: fixed;
+  filter: drop-shadow(0 0 20px rgba(100, 116, 139, 0.2));
   animation: rotate-wobble 15s ease-in-out infinite;
+  z-index: 1;
 }
 
 /* Diamond Shape */
 .diamond-3d {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.25), rgba(96, 165, 250, 0.15));
-  border: 2px solid rgba(30, 64, 175, 0.35);
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.18), rgba(148, 163, 184, 0.12));
+  border: 2px solid rgba(71, 85, 105, 0.25);
   transform: rotate(45deg);
-  position: absolute;
+  position: fixed;
   animation: bounce-rotate 12s ease-in-out infinite;
-  box-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 30px rgba(100, 116, 139, 0.15);
+  z-index: 1;
 }
 
 /* Hexagon */
 .hexagon-3d {
   width: 50px;
   height: 29px;
-  background: rgba(30, 64, 175, 0.2);
-  border: 2px solid rgba(30, 64, 175, 0.3);
-  position: absolute;
+  background: rgba(71, 85, 105, 0.15);
+  border: 2px solid rgba(71, 85, 105, 0.2);
+  position: fixed;
   animation: spin-float 18s ease-in-out infinite;
+  z-index: 1;
 }
 
 .hexagon-3d:before,
@@ -489,12 +493,12 @@ body {
 
 .hexagon-3d:before {
   bottom: 100%;
-  border-bottom: 14.5px solid rgba(30, 64, 175, 0.2);
+  border-bottom: 14.5px solid rgba(71, 85, 105, 0.15);
 }
 
 .hexagon-3d:after {
   top: 100%;
-  border-top: 14.5px solid rgba(30, 64, 175, 0.2);
+  border-top: 14.5px solid rgba(71, 85, 105, 0.15);
 }
 
 @keyframes rotate-3d-cube {
