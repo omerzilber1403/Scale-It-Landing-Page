@@ -18,6 +18,82 @@ export default function Hero({ lang }: HeroProps) {
       {/* Animated background grid */}
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
+      {/* 🎯 Floating Particles */}
+      {[...Array(20)].map((_, i) => (
+        <div
+          key={`particle-${i}`}
+          className="particle"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 15}s`,
+            animationDuration: `${15 + Math.random() * 10}s`,
+          }}
+          aria-hidden="true"
+        />
+      ))}
+      
+      {/* 🔷 Geometric Shapes */}
+      <div
+        className="geometric-shape w-32 h-32 animate-rotate-3d"
+        style={{
+          top: '15%',
+          right: '10%',
+          animationDelay: '0s',
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="geometric-shape w-24 h-24 rounded-full animate-pulse-scale"
+        style={{
+          bottom: '20%',
+          left: '15%',
+          animationDelay: '3s',
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="geometric-shape w-20 h-20 animate-rotate-3d"
+        style={{
+          top: '40%',
+          left: '8%',
+          animationDelay: '6s',
+          animationDuration: '25s',
+        }}
+        aria-hidden="true"
+      />
+      
+      {/* 🌀 Spiral Lines */}
+      <div
+        className="spiral-line"
+        style={{
+          top: '25%',
+          right: '20%',
+          animationDelay: '0s',
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="spiral-line"
+        style={{
+          bottom: '30%',
+          left: '25%',
+          animationDelay: '5s',
+          animationDuration: '25s',
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="spiral-line"
+        style={{
+          top: '60%',
+          right: '35%',
+          animationDelay: '10s',
+          animationDuration: '30s',
+        }}
+        aria-hidden="true"
+      />
+      
       {/* 🌊 Ocean Morphing Shapes - UNIQUE! */}
       
       {/* Morphing Blob 1 */}

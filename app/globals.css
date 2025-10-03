@@ -295,3 +295,121 @@ body {
   animation: wave-float 20s ease-in-out infinite;
 }
 
+/* 🎯 Floating Particles */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(30px, -40px) scale(1.1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-20px, -80px) scale(0.9);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate(40px, -60px) scale(1.05);
+    opacity: 0.5;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--neon), var(--neon-2));
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-float 15s ease-in-out infinite;
+}
+
+/* 🔷 Geometric Shapes */
+@keyframes rotate-3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1.3) rotate(180deg);
+    opacity: 0.3;
+  }
+}
+
+.geometric-shape {
+  position: absolute;
+  border: 2px solid var(--neon);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.animate-rotate-3d {
+  animation: rotate-3d 30s linear infinite;
+}
+
+.animate-pulse-scale {
+  animation: pulse-scale 12s ease-in-out infinite;
+}
+
+/* 🌀 Spiral Lines */
+@keyframes spiral-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.2;
+  }
+}
+
+.spiral-line {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px solid var(--neon-2);
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  pointer-events: none;
+  animation: spiral-spin 20s linear infinite;
+}
+
+/* 🎨 Gradient Orbs with Glow */
+@keyframes float-glow {
+  0%, 100% {
+    transform: translate(0, 0);
+    filter: blur(40px) brightness(1);
+  }
+  33% {
+    transform: translate(30px, -30px);
+    filter: blur(50px) brightness(1.2);
+  }
+  66% {
+    transform: translate(-30px, 30px);
+    filter: blur(45px) brightness(1.1);
+  }
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-glow 18s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
