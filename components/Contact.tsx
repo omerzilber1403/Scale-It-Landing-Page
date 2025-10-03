@@ -112,7 +112,7 @@ export default function Contact({ lang }: ContactProps) {
           className="flex justify-center gap-4 mb-8"
         >
           <a
-            href="https://wa.me/972XXXXXXXXX"
+            href="https://wa.me/972542259669"
             target="_blank"
             rel="noopener noreferrer"
             className="w-14 h-14 rounded-full bg-gradient-to-br from-neon/20 to-neon-2/20 border-2 border-neon flex items-center justify-center hover:bg-neon hover:scale-110 transition-all duration-300 neon-glow group"
