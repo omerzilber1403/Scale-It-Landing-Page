@@ -66,8 +66,8 @@ export default function Media({ lang }: MediaProps) {
               />
               
               <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-colors duration-300">
-                <div className="w-16 h-16 rounded-full bg-neon/20 backdrop-blur-sm flex items-center justify-center border-2 border-neon group-hover:bg-neon/40 group-hover:scale-110 transition-all duration-300 neon-glow">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="text-neon ml-1">
+                <div className="w-16 h-16 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center shadow-lg group-hover:bg-white group-hover:scale-110 transition-all duration-300" style={{ boxShadow: '0 0 30px rgba(59, 130, 246, 0.4), 0 0 60px rgba(37, 99, 235, 0.2)' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="text-neon ml-1 group-hover:scale-110 transition-transform">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
                 </div>

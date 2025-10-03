@@ -33,23 +33,30 @@ export default function Hero({ lang }: HeroProps) {
         />
       ))}
       
-      {/* 🫧 Soft Bubbles */}
+      {/* 🫧 Soft Bubbles - More Visible */}
       <div className="bubble w-32 h-32 animate-gentle-float" style={{ top: '8%', right: '15%', animationDelay: '0s' }} aria-hidden="true" />
       <div className="bubble w-24 h-24 animate-soft-pulse" style={{ top: '45%', left: '10%', animationDelay: '5s' }} aria-hidden="true" />
       <div className="bubble w-40 h-40 animate-gentle-float" style={{ bottom: '15%', right: '25%', animationDelay: '10s' }} aria-hidden="true" />
       <div className="bubble w-28 h-28 animate-soft-pulse" style={{ top: '60%', right: '8%', animationDelay: '15s' }} aria-hidden="true" />
       <div className="bubble w-36 h-36 animate-gentle-float" style={{ top: '25%', left: '5%', animationDelay: '20s' }} aria-hidden="true" />
+      <div className="bubble w-30 h-30 animate-soft-pulse" style={{ top: '80%', right: '40%', animationDelay: '12s' }} aria-hidden="true" />
+      <div className="bubble w-26 h-26 animate-gentle-float" style={{ top: '35%', right: '5%', animationDelay: '25s' }} aria-hidden="true" />
+      <div className="bubble w-34 h-34 animate-soft-pulse" style={{ bottom: '40%', left: '30%', animationDelay: '18s' }} aria-hidden="true" />
       
       {/* ☁️ Soft Clouds */}
       <div className="cloud w-64 h-48 animate-cloud-drift" style={{ top: '12%', left: '20%', animationDelay: '2s' }} aria-hidden="true" />
       <div className="cloud w-80 h-56 animate-cloud-drift" style={{ bottom: '20%', right: '15%', animationDelay: '8s', animationDuration: '50s' }} aria-hidden="true" />
       <div className="cloud w-72 h-52 animate-cloud-drift" style={{ top: '50%', right: '30%', animationDelay: '14s', animationDuration: '55s' }} aria-hidden="true" />
       <div className="cloud w-56 h-40 animate-cloud-drift" style={{ bottom: '35%', left: '12%', animationDelay: '18s' }} aria-hidden="true" />
+      <div className="cloud w-68 h-50 animate-cloud-drift" style={{ top: '75%', right: '12%', animationDelay: '22s', animationDuration: '48s' }} aria-hidden="true" />
+      <div className="cloud w-60 h-44 animate-cloud-drift" style={{ top: '30%', left: '40%', animationDelay: '26s' }} aria-hidden="true" />
       
       {/* 🌊 Soft Rings */}
       <div className="soft-ring w-48 h-48" style={{ top: '18%', right: '40%', animationDelay: '3s' }} aria-hidden="true" />
       <div className="soft-ring w-56 h-56" style={{ bottom: '25%', left: '35%', animationDelay: '12s' }} aria-hidden="true" />
       <div className="soft-ring w-40 h-40" style={{ top: '70%', left: '18%', animationDelay: '22s' }} aria-hidden="true" />
+      <div className="soft-ring w-52 h-52" style={{ top: '40%', right: '20%', animationDelay: '16s' }} aria-hidden="true" />
+      <div className="soft-ring w-44 h-44" style={{ bottom: '50%', left: '8%', animationDelay: '28s' }} aria-hidden="true" />
       
       {/* 🌊 Ocean Morphing Shapes - UNIQUE! */}
       
