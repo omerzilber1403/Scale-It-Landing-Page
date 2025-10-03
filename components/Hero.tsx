@@ -18,28 +18,28 @@ export default function Hero({ lang }: HeroProps) {
       {/* Animated background grid */}
       <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
       
-      {/* 🎨 Vibrant Floating Orbs - Wiz Style */}
-      <motion.div
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.2, 0.35, 0.2],
-          x: [0, 30, 0],
-          y: [0, -25, 0],
-        }}
-        transition={{
-          duration: 16,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-        className="absolute top-10 right-10 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-indigo-300 via-purple-400 to-pink-300 blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
+      {/* 🌊 Ocean Morphing Shapes - UNIQUE! */}
+      
+      {/* Morphing Blob 1 */}
       <motion.div
         animate={{
           scale: [1, 1.15, 1],
-          opacity: [0.18, 0.3, 0.18],
-          x: [0, -35, 0],
-          y: [0, 30, 0],
+          opacity: [0.25, 0.4, 0.25],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+        className="absolute -top-20 -right-20 w-[600px] h-[600px] bg-gradient-to-br from-sky-200 via-cyan-300 to-blue-400 blur-3xl pointer-events-none animate-morph"
+        aria-hidden="true"
+      />
+      
+      {/* Wave Floating Shape 2 */}
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.22, 0.38, 0.22],
         }}
         transition={{
           duration: 20,
@@ -47,37 +47,59 @@ export default function Hero({ lang }: HeroProps) {
           ease: 'easeInOut',
           delay: 3,
         }}
-        className="absolute bottom-20 left-10 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-purple-300 via-fuchsia-400 to-pink-400 blur-3xl pointer-events-none"
+        className="absolute -bottom-10 -left-10 w-[650px] h-[650px] bg-gradient-to-br from-cyan-200 via-teal-300 to-sky-400 blur-3xl pointer-events-none animate-wave-float"
+        style={{ borderRadius: '45% 55% 60% 40% / 50% 45% 55% 50%' }}
         aria-hidden="true"
       />
+      
+      {/* Rotating Morphing Blob 3 */}
       <motion.div
         animate={{
-          scale: [1, 1.08, 1],
-          opacity: [0.15, 0.28, 0.15],
-          x: [0, 25, 0],
-          y: [0, -20, 0],
+          scale: [1, 1.1, 1],
+          opacity: [0.18, 0.32, 0.18],
+          rotate: [0, 360],
         }}
         transition={{
-          duration: 24,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 6,
-        }}
-        className="absolute top-1/3 right-1/4 w-[450px] h-[450px] rounded-full bg-gradient-to-br from-cyan-300 via-blue-400 to-indigo-400 blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
-      <motion.div
-        animate={{
-          scale: [1, 1.12, 1],
-          opacity: [0.12, 0.25, 0.12],
-          rotate: [0, 120, 240],
-        }}
-        transition={{
-          duration: 35,
+          duration: 40,
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-300 blur-3xl pointer-events-none"
+        className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-blue-200 via-cyan-300 to-teal-300 blur-3xl pointer-events-none animate-morph"
+        aria-hidden="true"
+      />
+      
+      {/* Gentle Floating Shape 4 */}
+      <motion.div
+        animate={{
+          scale: [1, 1.12, 1],
+          opacity: [0.15, 0.28, 0.15],
+          x: [0, 40, 0],
+          y: [0, -30, 0],
+        }}
+        transition={{
+          duration: 22,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 5,
+        }}
+        className="absolute bottom-1/3 right-1/3 w-[550px] h-[550px] bg-gradient-to-br from-teal-200 via-cyan-300 to-sky-300 blur-3xl pointer-events-none"
+        style={{ borderRadius: '40% 60% 50% 50% / 60% 40% 60% 40%' }}
+        aria-hidden="true"
+      />
+      
+      {/* Central Pulsing Glow */}
+      <motion.div
+        animate={{
+          scale: [1, 1.08, 1],
+          opacity: [0.12, 0.24, 0.12],
+        }}
+        transition={{
+          duration: 16,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 8,
+        }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-cyan-100 via-teal-200 to-blue-200 blur-3xl pointer-events-none animate-morph"
         aria-hidden="true"
       />
 
