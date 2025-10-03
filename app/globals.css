@@ -60,6 +60,14 @@ body {
   justify-content: center;
 }
 
+/* Footer section - allow scrolling past it */
+#footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  min-height: auto;
+  justify-content: flex-start;
+}
+
 /* 💙 Perfect Glass Effect with Subtle Orange */
 .glass {
   background: rgba(255, 255, 255, 0.75);

@@ -117,10 +117,9 @@ export default function Home() {
 
         {/* Final Mobile Spacer */}
         <div className="mobile-spacer" />
-      </div>
 
-      {/* Footer */}
-      <footer className="relative z-20 py-8 px-4 border-t border-neon/20 glass">
+        {/* Footer as snap section */}
+        <section id="footer" className="snap-section py-8 px-4 border-t border-neon/20 glass">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Left side - Logo/Brand */}
@@ -162,7 +161,8 @@ export default function Home() {
         {/* Decorative elements */}
         <div className="absolute top-0 left-10 w-32 h-32 rounded-full bg-neon/10 blur-3xl pointer-events-none" aria-hidden="true" />
         <div className="absolute bottom-0 right-10 w-32 h-32 rounded-full bg-neon-2/10 blur-3xl pointer-events-none" aria-hidden="true" />
-      </footer>
+        </section>
+      </div>
 
     </main>
   );
