@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark futuristic theme */
+  --bg: #0b0f14;
+  --bg-glass: rgba(15, 23, 42, 0.7);
+  --fg: #e6f1ff;
+  --fg-muted: #94a3b8;
+  --neon: #66ddff;
+  --neon-2: #bb66ff;
+  
+  /* Font stacks */
+  --font-display: 'Space Grotesk', 'Heebo', system-ui, sans-serif;
+  --font-body: 'Inter', 'Heebo', system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth scroll snap for sections */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(102, 221, 255, 0.1);
+}
+
+/* Neon glow effect */
+.neon-glow {
+  box-shadow: 
+    0 0 10px rgba(102, 221, 255, 0.3),
+    0 0 20px rgba(102, 221, 255, 0.2),
+    0 0 30px rgba(102, 221, 255, 0.1);
+}
+
+.neon-glow-subtle {
+  box-shadow: 
+    0 0 5px rgba(102, 221, 255, 0.2),
+    0 0 10px rgba(102, 221, 255, 0.1);
+}
+
+.neon-text-glow {
+  text-shadow:
+    0 0 10px rgba(102, 221, 255, 0.5),
+    0 0 20px rgba(102, 221, 255, 0.3),
+    0 0 30px rgba(102, 221, 255, 0.2);
+}
+
+/* Grid background effect */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(102, 221, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(102, 221, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--neon);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-2);
+}
+
+/* Loading animation for images */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.5) 4%,
+    rgba(102, 221, 255, 0.1) 25%,
+    rgba(15, 23, 42, 0.5) 36%
+  );
+  background-size: 1000px 100%;
+}
+
