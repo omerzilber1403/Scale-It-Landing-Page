@@ -15,14 +15,20 @@ export interface Translations {
     service1: {
       title: string;
       description: string;
+      painPoint: string;
+      solution: string;
     };
     service2: {
       title: string;
       description: string;
+      painPoint: string;
+      solution: string;
     };
     service3: {
       title: string;
       description: string;
+      painPoint: string;
+      solution: string;
     };
   };
   whyUs: {
@@ -118,16 +124,22 @@ export const translations: Record<Lang, Translations> = {
     services: {
       header: 'השירותים שלנו',
       service1: {
-        title: 'קמפיינים',
-        description: 'ניהול קמפיינים ממומנים בכל הפלטפורמות',
+        title: 'קמפיינים ממומנים',
+        description: 'ניהול מקצועי של קמפיינים ממומנים במטא, גוגל, לינקדאין ועוד',
+        painPoint: '💸 תקציב פרסום שנזרק לטמיון?',
+        solution: '✅ אנחנו מייעלים כל שקל - ROI מוכח, דיווח שקוף',
       },
       service2: {
-        title: 'קריאייטיב',
-        description: 'יצירת תוכן ויזואלי מושך ואפקטיבי',
+        title: 'אסטרטגיה דיגיטלית',
+        description: 'בניית אסטרטגיה שיווקית מותאמת אישית ליעדי העסק שלכם',
+        painPoint: '🎯 לא יודעים מאיפה להתחיל?',
+        solution: '✅ אנחנו בונים תוכנית פעולה ברורה מיום 1',
       },
       service3: {
-        title: 'אסטרטגיה',
-        description: 'בניית אסטרטגיית שיווק מקיפה',
+        title: 'תוכן ועיצוב',
+        description: 'יצירת קריאייטיב מנצח - ממיתוג ועד סרטונים ויראליים',
+        painPoint: '🎨 תוכן שלא מייצר engagement?',
+        solution: '✅ אנחנו יוצרים תוכן שעוצר גלילה ומניע פעולה',
       },
     },
     whyUs: {
@@ -221,16 +233,22 @@ export const translations: Record<Lang, Translations> = {
     services: {
       header: 'Our Services',
       service1: {
-        title: 'Campaigns',
-        description: 'Managing paid campaigns across all platforms',
+        title: 'Paid Campaigns',
+        description: 'Professional management of paid campaigns on Meta, Google, LinkedIn and more',
+        painPoint: '💸 Wasting your ad budget?',
+        solution: '✅ We optimize every dollar - proven ROI, transparent reporting',
       },
       service2: {
-        title: 'Creative',
-        description: 'Creating attractive and effective visual content',
+        title: 'Digital Strategy',
+        description: 'Building a customized marketing strategy tailored to your business goals',
+        painPoint: '🎯 Don\'t know where to start?',
+        solution: '✅ We build a clear action plan from day 1',
       },
       service3: {
-        title: 'Strategy',
-        description: 'Building comprehensive marketing strategy',
+        title: 'Content & Design',
+        description: 'Creating winning creative - from branding to viral videos',
+        painPoint: '🎨 Content not generating engagement?',
+        solution: '✅ We create scroll-stopping content that drives action',
       },
     },
     whyUs: {

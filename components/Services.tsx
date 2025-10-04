@@ -44,7 +44,7 @@ export default function Services({ lang }: ServicesProps) {
           {t.services.header}
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -52,13 +52,23 @@ export default function Services({ lang }: ServicesProps) {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="glass rounded-2xl p-8 hover:border-neon/50 transition-all duration-300"
+              className="glass rounded-2xl p-6 md:p-8 hover:border-neon/50 transition-all duration-300 flex flex-col"
             >
-              <div className="w-16 h-16 rounded-full bg-neon-2/20 flex items-center justify-center mb-6">
-                <service.icon size={32} className="text-neon-2" />
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-neon-2/20 flex items-center justify-center mb-4 md:mb-6">
+                <service.icon size={28} className="text-neon-2 md:w-8 md:h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-fg mb-4">{service.title}</h3>
-              <p className="text-lg text-fg-muted leading-relaxed">{service.description}</p>
+              <h3 className="text-xl md:text-2xl font-bold text-fg mb-3">{service.title}</h3>
+              <p className="text-base md:text-lg text-fg-muted leading-relaxed mb-4">{service.description}</p>
+              
+              {/* Pain Point & Solution */}
+              <div className="mt-auto space-y-3 pt-4 border-t border-neon/20">
+                <div className="flex items-start gap-2">
+                  <p className="text-sm text-fg-muted">{service.painPoint}</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <p className="text-sm text-neon-2 font-medium">{service.solution}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
