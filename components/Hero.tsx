@@ -149,7 +149,7 @@ export default function Hero({ lang }: HeroProps) {
           transition={{ duration: 0.6, delay: 0.6 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => document.getElementById('why-us')?.scrollIntoView({ behavior: 'smooth' })}
           className="px-8 py-4 rounded-full bg-gradient-to-r from-neon to-neon-2 text-bg font-bold text-lg hover:shadow-xl transition-all duration-300 neon-glow"
         >
           {t.hero.cta}
