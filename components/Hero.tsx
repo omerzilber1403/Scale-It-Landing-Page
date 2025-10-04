@@ -135,21 +135,14 @@ export default function Hero({ lang }: HeroProps) {
         </motion.h1>
 
         {/* Social Proof */}
-        <motion.div
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex items-center justify-center gap-2 mb-6 text-neon-2"
+          className="text-center text-neon-2 mb-6 text-base font-semibold"
         >
-          <div className="flex -space-x-2">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-neon/30 to-neon-2/30 border-2 border-bg" />
-            ))}
-          </div>
-          <p className="text-sm font-medium">
-            {lang === 'he' ? '50+ לקוחות מרוצים | תוצאות מוכחות' : '50+ Happy Clients | Proven Results'}
-          </p>
-        </motion.div>
+          {lang === 'he' ? '⭐ 50+ לקוחות מרוצים | תוצאות מוכחות' : '⭐ 50+ Happy Clients | Proven Results'}
+        </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
