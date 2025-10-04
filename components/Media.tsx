@@ -44,7 +44,7 @@ export default function Media({ lang }: MediaProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
         >
           {videos.map((video) => (
             <motion.button
