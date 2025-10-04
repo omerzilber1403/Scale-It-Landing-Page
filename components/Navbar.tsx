@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronUp, MessageSquare, PlayCircle } from 'lucide-react';
+import { ChevronUp, MessageSquare, PlayCircle, Menu, X } from 'lucide-react';
 import { Lang } from '@/lib/i18n';
 import LangToggle from './LangToggle';
 
@@ -16,6 +16,7 @@ export default function Navbar({ lang, onToggleLang }: NavbarProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const sections = ['hero', 'services', 'why-us', 'media', 'results', 'contact'];
@@ -100,8 +101,8 @@ export default function Navbar({ lang, onToggleLang }: NavbarProps) {
             SCALE IT
           </button>
 
-          {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Desktop Nav Links + CTA */}
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -116,32 +117,78 @@ export default function Navbar({ lang, onToggleLang }: NavbarProps) {
               </button>
             ))}
             <LangToggle lang={lang} onToggle={onToggleLang} />
+            <a
+              href="https://wa.me/972542259669"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2.5 rounded-full bg-gradient-to-r from-neon to-neon-2 text-bg font-bold text-sm hover:shadow-xl transition-all neon-glow hover:scale-105"
+            >
+              {lang === 'he' ? 'קבעו שיחה' : 'Book a Call'}
+            </a>
           </div>
 
-          {/* Mobile Quick Actions + Lang Toggle */}
+          {/* Mobile: Hamburger + Lang Toggle */}
           <div className="md:hidden flex items-center gap-3">
-            {/* Media Icon */}
-            <button
-              onClick={() => scrollToSection('media')}
-              className="w-9 h-9 rounded-full bg-gradient-to-r from-neon/10 to-neon-2/10 border border-neon/30 flex items-center justify-center hover:scale-110 transition-transform"
-              aria-label={lang === 'he' ? 'מדיה' : 'Media'}
-            >
-              <PlayCircle size={18} className="text-neon" />
-            </button>
-            
-            {/* Contact Icon */}
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="w-9 h-9 rounded-full bg-gradient-to-r from-neon to-neon-2 flex items-center justify-center neon-glow-subtle hover:scale-110 transition-transform"
-              aria-label={lang === 'he' ? 'צור קשר' : 'Contact'}
-            >
-              <MessageSquare size={18} className="text-white" />
-            </button>
-            
             <LangToggle lang={lang} onToggle={onToggleLang} />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="w-10 h-10 rounded-lg bg-gradient-to-r from-neon/10 to-neon-2/10 border border-neon/30 flex items-center justify-center hover:scale-110 transition-transform"
+              aria-label={lang === 'he' ? 'תפריט' : 'Menu'}
+            >
+              {mobileMenuOpen ? <X size={24} className="text-neon" /> : <Menu size={24} className="text-neon" />}
+            </button>
           </div>
         </div>
       </motion.nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+            className="fixed inset-0 z-40 md:hidden"
+          >
+            <div className="absolute inset-0 bg-bg/95 backdrop-blur-xl pt-20 px-6">
+              <nav className="flex flex-col gap-6">
+                {navLinks.map((link, index) => (
+                  <motion.button
+                    key={link.id}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    onClick={() => {
+                      scrollToSection(link.id);
+                      setMobileMenuOpen(false);
+                    }}
+                    className={`text-2xl font-bold text-right py-3 transition-colors ${
+                      activeSection === link.id
+                        ? 'text-neon'
+                        : 'text-fg hover:text-neon'
+                    }`}
+                  >
+                    {link.label}
+                  </motion.button>
+                ))}
+                <motion.a
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: navLinks.length * 0.1 }}
+                  href="https://wa.me/972542259669"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 mt-4 rounded-full bg-gradient-to-r from-neon to-neon-2 text-bg font-bold text-lg hover:shadow-xl transition-all neon-glow text-center"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {lang === 'he' ? 'קבעו שיחה' : 'Book a Call'}
+                </motion.a>
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Scroll to Top Button */}
       <AnimatePresence>
