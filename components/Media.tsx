@@ -44,7 +44,7 @@ export default function Media({ lang }: MediaProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
         >
           {videos.map((video) => (
             <motion.button
@@ -59,7 +59,7 @@ export default function Media({ lang }: MediaProps) {
                 alt={lang === 'he' ? video.titleHe : video.titleEn}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 50vw, 33vw"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
               />
               
               <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-colors duration-300">
