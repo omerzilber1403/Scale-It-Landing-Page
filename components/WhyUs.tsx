@@ -55,13 +55,15 @@ export default function WhyUs({ lang }: WhyUsProps) {
         </motion.div>
 
         {/* Accordion */}
-        <div className="space-y-3">
+        <div className="space-y-3" role="tablist" aria-label={lang === 'he' ? 'רשימת שירותים' : 'Services list'}>
           {items.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              role="tab"
+              aria-expanded={openIndex === index}
             >
               <div className={`glass rounded-2xl overflow-hidden transition-all duration-300 ${
                 openIndex === index ? 'shadow-lg shadow-neon/20 border-neon/40' : 'border-neon/20'
@@ -84,9 +86,12 @@ export default function WhyUs({ lang }: WhyUsProps) {
                     </div>
                     
                     {/* Title */}
-                    <h3 className={`text-lg md:text-xl font-bold transition-colors duration-300 ${
-                      openIndex === index ? 'text-neon' : 'text-neon-2'
-                    }`}>
+                    <h3 
+                      id={`tab-${index}`}
+                      className={`text-lg md:text-xl font-bold transition-colors duration-300 ${
+                        openIndex === index ? 'text-neon' : 'text-neon-2'
+                      }`}
+                    >
                       {item.title}
                     </h3>
                   </div>
@@ -107,6 +112,8 @@ export default function WhyUs({ lang }: WhyUsProps) {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      role="tabpanel"
+                      aria-labelledby={`tab-${index}`}
                     >
                       <div className="px-4 pb-4 md:px-5 md:pb-5">
                         <div className="pl-12 md:pl-14">
