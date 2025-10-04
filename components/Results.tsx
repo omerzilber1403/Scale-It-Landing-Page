@@ -39,30 +39,49 @@ export default function Results({ lang }: ResultsProps) {
           {t.results.header}
         </motion.h2>
 
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {cases.map((caseStudy, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-              className="glass rounded-3xl p-8 md:p-12"
+              className="glass rounded-3xl p-6 md:p-12"
             >
-              <h3 className="text-3xl font-bold text-neon-2 mb-4">{caseStudy.company}</h3>
-              <p className="text-xl text-fg mb-8">{caseStudy.description}</p>
+              {/* Company Name & Date */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-neon-2 mb-2 md:mb-0">{caseStudy.company}</h3>
+                <p className="text-sm text-fg-muted">{caseStudy.date}</p>
+              </div>
               
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div className="text-center p-6 rounded-xl bg-neon/10 border border-neon/30">
-                  <div className="text-4xl font-black text-neon mb-2">{caseStudy.metric1Value}</div>
-                  <div className="text-lg text-fg-muted">{caseStudy.metric1Title}</div>
+              {/* Challenge & Solution */}
+              <div className="space-y-4 mb-8">
+                <div className="p-4 md:p-6 rounded-xl bg-red-500/10 border border-red-500/30">
+                  <p className="text-base md:text-lg text-fg leading-relaxed">{caseStudy.challenge}</p>
                 </div>
-                <div className="text-center p-6 rounded-xl bg-neon-2/10 border border-neon-2/30">
-                  <div className="text-4xl font-black text-neon-2 mb-2">{caseStudy.metric2Value}</div>
-                  <div className="text-lg text-fg-muted">{caseStudy.metric2Title}</div>
+                <div className="p-4 md:p-6 rounded-xl bg-green-500/10 border border-green-500/30">
+                  <p className="text-base md:text-lg text-fg leading-relaxed">{caseStudy.solution}</p>
                 </div>
               </div>
               
-              <p className="text-sm text-fg-muted text-center">{caseStudy.date}</p>
+              {/* Results Metrics */}
+              <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6">
+                <div className="text-center p-4 md:p-6 rounded-xl bg-neon/10 border border-neon/30">
+                  <div className="text-3xl md:text-4xl font-black text-neon mb-2">{caseStudy.metric1Value}</div>
+                  <div className="text-sm md:text-lg text-fg-muted">{caseStudy.metric1Title}</div>
+                </div>
+                <div className="text-center p-4 md:p-6 rounded-xl bg-neon-2/10 border border-neon-2/30">
+                  <div className="text-3xl md:text-4xl font-black text-neon-2 mb-2">{caseStudy.metric2Value}</div>
+                  <div className="text-sm md:text-lg text-fg-muted">{caseStudy.metric2Title}</div>
+                </div>
+              </div>
+              
+              {/* Client Quote */}
+              {caseStudy.clientQuote && (
+                <div className="mt-6 p-4 md:p-6 rounded-xl bg-neon-2/5 border-l-4 border-neon-2">
+                  <p className="text-base md:text-lg text-fg italic">{caseStudy.clientQuote}</p>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

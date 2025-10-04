@@ -65,30 +65,36 @@ export interface Translations {
     header: string;
     case1: {
       company: string;
-      description: string;
+      challenge: string;
+      solution: string;
       metric1Title: string;
       metric1Value: string;
       metric2Title: string;
       metric2Value: string;
       date: string;
+      clientQuote?: string;
     };
     case2: {
       company: string;
-      description: string;
+      challenge: string;
+      solution: string;
       metric1Title: string;
       metric1Value: string;
       metric2Title: string;
       metric2Value: string;
       date: string;
+      clientQuote?: string;
     };
     case3: {
       company: string;
-      description: string;
+      challenge: string;
+      solution: string;
       metric1Title: string;
       metric1Value: string;
       metric2Title: string;
       metric2Value: string;
       date: string;
+      clientQuote?: string;
     };
   };
   contact: {
@@ -133,7 +139,7 @@ export const translations: Record<Lang, Translations> = {
         title: 'אסטרטגיה דיגיטלית',
         description: 'בניית אסטרטגיה שיווקית מותאמת אישית ליעדי העסק שלכם',
         painPoint: '🎯 לא יודעים מאיפה להתחיל?',
-        solution: '✅ אנחנו בונים תוכנית פעולה ברורה מיום 1',
+        solution: '✅ אנחנו בונים תוכנית פעולה ברורה מהיום הראשון',
       },
       service3: {
         title: 'תוכן ועיצוב',
@@ -176,30 +182,36 @@ export const translations: Record<Lang, Translations> = {
       header: 'תוצאות',
       case1: {
         company: 'jobspace',
-        description: 'חברה טכנולוגית לגיוס עובדים בעזרת בינה מלאכותית',
+        challenge: '🚫 חברת טכנולוגיה לגיוס עובדים התמודדה עם ROI נמוך וקושי להגיע לקהל היעד המדויק',
+        solution: '💡 בנינו אסטרטגיית פרסום ממוקדת ב-LinkedIn + Meta, כולל קריאייטיב מותאם לכל שלב במסע הלקוח',
         metric1Title: 'גדילה במכירות',
         metric1Value: '437%',
         metric2Title: 'ירידה בעלות לקוח',
         metric2Value: '27%',
         date: 'החל מ 01/01/2025',
+        clientQuote: '"Scale It הפכו את המשחק - מ-0 לידים ליום ל-50+ לידים איכותיים בחודש"',
       },
       case2: {
         company: 'Match HR',
-        description: 'פירמת ייעוץ לעסקי כושר ותזונה',
+        challenge: '🚫 פירמת ייעוץ HR נאבקה לייצר לידים איכותיים ולבדל עצמה בשוק צפוף',
+        solution: '💡 יצרנו מיתוג חדש + תוכן חינוכי ויראלי ברילס, ובנינו משפך המרה אוטומטי',
         metric1Title: 'גדילה בשורת רווח חודשית',
         metric1Value: '1740%',
         metric2Title: 'ירידה בעלות לקוח',
         metric2Value: '43%',
         date: 'החל מ 01/06/2024',
+        clientQuote: '"בזכות Scale It הפכנו מעסק קטן לשחקן מוביל בתחום"',
       },
       case3: {
         company: 'One',
-        description: 'חברה לייעוץ ארגוני',
+        challenge: '🚫 חברת ייעוץ ארגוני התקשתה לקבוע פגישות עם מקבלי החלטות בארגונים',
+        solution: '💡 הקמנו קמפיינים ממוקדים ב-LinkedIn + אסטרטגיית תוכן B2B, כולל lead magnets',
         metric1Title: 'פגישות שנקבעו',
         metric1Value: '16',
         metric2Title: 'עלות לפגישה',
         metric2Value: '253₪',
         date: 'החל מ 01/06/2025',
+        clientQuote: '"סוף סוף אנחנו מגיעים לקהל הנכון - הפגישות מתורגמות לעסקאות!"',
       },
     },
     contact: {
@@ -285,30 +297,36 @@ export const translations: Record<Lang, Translations> = {
       header: 'Results',
       case1: {
         company: 'jobspace',
-        description: 'Technology company for employee recruitment using artificial intelligence',
+        challenge: '🚫 AI recruitment tech company struggled with low ROI and difficulty reaching precise target audience',
+        solution: '💡 Built targeted advertising strategy on LinkedIn + Meta, including creative tailored for each customer journey stage',
         metric1Title: 'Sales Growth',
         metric1Value: '437%',
         metric2Title: 'Customer Cost Reduction',
         metric2Value: '27%',
         date: 'From 01/01/2025',
+        clientQuote: '"Scale It changed the game - from 0 leads per day to 50+ quality leads per month"',
       },
       case2: {
         company: 'Match HR',
-        description: 'Consulting firm for fitness and nutrition businesses',
+        challenge: '🚫 HR consulting firm struggled to generate quality leads and differentiate in a crowded market',
+        solution: '💡 Created new branding + educational viral content in Reels, and built automated conversion funnel',
         metric1Title: 'Monthly Profit Line Growth',
         metric1Value: '1740%',
         metric2Title: 'Customer Cost Reduction',
         metric2Value: '43%',
         date: 'From 01/06/2024',
+        clientQuote: '"Thanks to Scale It, we turned from a small business into a leading player"',
       },
       case3: {
         company: 'One',
-        description: 'Organizational consulting company',
+        challenge: '🚫 Organizational consulting firm struggled to book meetings with decision-makers in organizations',
+        solution: '💡 Launched targeted campaigns on LinkedIn + B2B content strategy, including lead magnets',
         metric1Title: 'Meetings Scheduled',
         metric1Value: '16',
         metric2Title: 'Cost Per Meeting',
         metric2Value: '₪253',
         date: 'From 01/06/2025',
+        clientQuote: '"Finally reaching the right audience - meetings translate into deals!"',
       },
     },
     contact: {
