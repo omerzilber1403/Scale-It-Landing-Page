@@ -129,31 +129,61 @@ export default function Hero({ lang }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-neon to-neon-2"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neon to-neon-2"
         >
           {t.hero.title}
         </motion.h1>
+
+        {/* Social Proof */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex items-center justify-center gap-2 mb-6 text-neon-2"
+        >
+          <div className="flex -space-x-2">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-neon/30 to-neon-2/30 border-2 border-bg" />
+            ))}
+          </div>
+          <p className="text-sm font-medium">
+            {lang === 'he' ? '50+ לקוחות מרוצים | תוצאות מוכחות' : '50+ Happy Clients | Proven Results'}
+          </p>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl lg:text-3xl mb-12 text-fg leading-relaxed max-w-3xl mx-auto"
+          className="text-lg md:text-xl lg:text-2xl mb-10 text-fg leading-relaxed max-w-3xl mx-auto"
         >
           {t.hero.subtitle}
         </motion.p>
 
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => document.getElementById('why-us')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-8 py-4 rounded-full bg-gradient-to-r from-neon to-neon-2 text-bg font-bold text-lg hover:shadow-xl transition-all duration-300 neon-glow"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          {t.hero.cta}
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('why-us')?.scrollIntoView({ behavior: 'smooth' })}
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-neon to-neon-2 text-bg font-bold text-lg hover:shadow-xl transition-all duration-300 neon-glow"
+          >
+            {t.hero.cta}
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' })}
+            className="w-full sm:w-auto px-8 py-4 rounded-full border-2 border-neon text-neon font-bold text-lg hover:bg-neon/10 transition-all duration-300"
+          >
+            {lang === 'he' ? 'ראו תוצאות' : 'See Results'}
+          </motion.button>
+        </motion.div>
 
       </div>
     </div>
