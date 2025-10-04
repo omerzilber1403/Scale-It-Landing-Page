@@ -84,7 +84,7 @@ export default function Home() {
           <Services lang={lang} />
         </section>
 
-        <section id="why-us" className="min-h-screen flex items-center justify-center py-20">
+        <section id="why-us" className="py-16 md:py-20">
           <WhyUs lang={lang} />
         </section>
 

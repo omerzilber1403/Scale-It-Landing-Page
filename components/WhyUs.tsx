@@ -29,7 +29,7 @@ export default function WhyUs({ lang }: WhyUsProps) {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
+    <div className="relative flex items-center justify-center px-4 py-16 md:py-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
       
       <motion.div
@@ -37,25 +37,25 @@ export default function WhyUs({ lang }: WhyUsProps) {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-4xl mx-auto"
+        className="relative z-10 max-w-4xl mx-auto w-full"
       >
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 text-neon neon-text-glow">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-3 text-neon neon-text-glow">
             {t.whyUs.header}
           </h2>
-          <p className="text-lg text-fg-muted">
+          <p className="text-sm md:text-lg text-fg-muted">
             {lang === 'he' ? 'לחץ לפתיחה' : 'Click to expand'}
           </p>
         </motion.div>
 
         {/* Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {items.map((item, index) => (
             <motion.div
               key={index}
@@ -69,11 +69,13 @@ export default function WhyUs({ lang }: WhyUsProps) {
                 {/* Header Button */}
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-neon/5 transition-colors duration-200"
+                  className="w-full flex items-center justify-between p-4 md:p-5 text-left hover:bg-neon/5 transition-colors duration-200"
+                  aria-expanded={openIndex === index}
+                  aria-label={`${item.title} - ${openIndex === index ? 'collapse' : 'expand'}`}
                 >
-                  <div className="flex items-center gap-4 flex-1">
+                  <div className="flex items-center gap-3 flex-1">
                     {/* Number Badge */}
-                    <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all duration-300 ${
+                    <div className={`flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold transition-all duration-300 ${
                       openIndex === index 
                         ? 'bg-gradient-to-r from-neon to-neon-2 text-white scale-110' 
                         : 'bg-neon/10 text-neon'
@@ -82,7 +84,7 @@ export default function WhyUs({ lang }: WhyUsProps) {
                     </div>
                     
                     {/* Title */}
-                    <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${
+                    <h3 className={`text-lg md:text-xl font-bold transition-colors duration-300 ${
                       openIndex === index ? 'text-neon' : 'text-neon-2'
                     }`}>
                       {item.title}
@@ -91,7 +93,7 @@ export default function WhyUs({ lang }: WhyUsProps) {
                   
                   {/* Arrow Icon */}
                   <ChevronDown 
-                    className={`flex-shrink-0 w-6 h-6 text-neon transition-transform duration-300 ${
+                    className={`flex-shrink-0 w-5 h-5 md:w-6 md:h-6 text-neon transition-transform duration-300 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                   />
@@ -106,14 +108,14 @@ export default function WhyUs({ lang }: WhyUsProps) {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                     >
-                      <div className="px-6 pb-6 pt-2">
-                        <div className="pl-14">
-                          <div className="text-base md:text-lg text-fg-muted leading-relaxed space-y-3">
+                      <div className="px-4 pb-4 md:px-5 md:pb-5">
+                        <div className="pl-12 md:pl-14">
+                          <div className="text-sm md:text-base text-fg-muted leading-relaxed space-y-2">
                             {item.description.split('\n').map((line, lineIndex) => {
                               // Bold headers
                               if (line.startsWith('**') && line.endsWith('**')) {
                                 return (
-                                  <div key={lineIndex} className="font-bold text-neon text-lg mt-4 first:mt-0">
+                                  <div key={lineIndex} className="font-bold text-neon text-base md:text-lg mt-3 first:mt-0">
                                     {line.replace(/\*\*/g, '')}
                                   </div>
                                 );
@@ -121,8 +123,8 @@ export default function WhyUs({ lang }: WhyUsProps) {
                               // Bullet points
                               if (line.startsWith('•')) {
                                 return (
-                                  <div key={lineIndex} className="flex items-start gap-3">
-                                    <span className="text-neon-2 mt-1">•</span>
+                                  <div key={lineIndex} className="flex items-start gap-2">
+                                    <span className="text-neon-2 mt-0.5">•</span>
                                     <span className="flex-1">{line.substring(2)}</span>
                                   </div>
                                 );
