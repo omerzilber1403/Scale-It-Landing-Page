@@ -16,11 +16,21 @@ export default function Media({ lang }: MediaProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [hoveredVideo, setHoveredVideo] = useState<string | null>(null);
 
   const getVideoId = (url: string) => {
     const match = url.match(/shorts\/([^?]+)/);
     return match ? match[1] : '';
   };
+
+  // Get unique categories
+  const categories = ['All', ...Array.from(new Set(videos.map(v => v.category)))];
+  
+  // Filter videos by category
+  const filteredVideos = selectedCategory === 'All' 
+    ? videos 
+    : videos.filter(video => video.category === selectedCategory);
 
   return (
     <div className="relative min-h-screen flex flex-col justify-center px-4 py-20 pb-40 md:pb-20 overflow-hidden">
@@ -35,21 +45,45 @@ export default function Media({ lang }: MediaProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
-          className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-12 text-center text-neon neon-text-glow"
+          className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-8 text-center text-neon neon-text-glow"
         >
           {t.media.header}
         </motion.h2>
 
+        {/* Category Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-3 mb-8"
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-neon to-neon-2 text-bg shadow-lg'
+                  : 'bg-bg-glass text-fg-muted hover:text-neon hover:bg-neon/10 border border-neon/20'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
         >
-          {videos.map((video) => (
+          {filteredVideos.map((video) => (
             <motion.button
               key={video.id}
               onClick={() => setSelectedVideo(video.embedUrl)}
+              onMouseEnter={() => setHoveredVideo(video.id)}
+              onMouseLeave={() => setHoveredVideo(null)}
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
               className="group relative aspect-[9/16] w-full rounded-xl overflow-hidden shadow-lg border border-fg-muted/20 hover:border-neon/50 transition-all duration-300 bg-bg-glass neon-glow-subtle"
@@ -70,10 +104,31 @@ export default function Media({ lang }: MediaProps) {
                 </div>
               </div>
               
+              {/* KPI Overlay on Hover */}
+              <AnimatePresence>
+                {hoveredVideo === video.id && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    className="absolute top-4 left-4 right-4 p-3 bg-black/80 backdrop-blur-md rounded-lg border border-neon/30"
+                  >
+                    <div className="text-xs text-neon font-bold mb-1">{lang === 'he' ? 'מטרה:' : 'Goal:'}</div>
+                    <div className="text-xs text-fg mb-2">{video.goal}</div>
+                    <div className="text-xs text-neon-2 font-bold">{video.kpi}</div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                <h3 className="font-bold text-sm md:text-base text-fg group-hover:text-neon transition-colors duration-300">
+                <h3 className="font-bold text-sm md:text-base text-fg group-hover:text-neon transition-colors duration-300 mb-1">
                   {lang === 'he' ? video.titleHe : video.titleEn}
                 </h3>
+                <div className="flex items-center gap-2 text-xs text-fg-muted">
+                  <span className="bg-neon/20 px-2 py-1 rounded-full">{video.category}</span>
+                  {video.views && <span>👁️ {video.views}</span>}
+                  {video.engagement && <span>❤️ {video.engagement}</span>}
+                </div>
               </div>
             </motion.button>
           ))}
