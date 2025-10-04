@@ -49,9 +49,50 @@ export default function WhyUs({ lang }: WhyUsProps) {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-3 text-neon neon-text-glow">
             {t.whyUs.header}
           </h2>
-          <p className="text-sm md:text-lg text-fg-muted">
+          <p className="text-sm md:text-lg text-fg-muted mb-6">
             {lang === 'he' ? 'לחץ לפתיחה' : 'Click to expand'}
           </p>
+          
+          {/* Timeline for first month */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-r from-neon/10 to-neon-2/10 rounded-2xl p-4 md:p-6 border border-neon/20 max-w-2xl mx-auto"
+          >
+            <h3 className="text-lg md:text-xl font-bold text-neon-2 mb-4">
+              {lang === 'he' ? '📅 החודש הראשון - תוכנית הפעולה שלנו' : '📅 First Month - Our Action Plan'}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="text-center">
+                <div className="w-8 h-8 bg-neon rounded-full flex items-center justify-center text-bg font-bold mx-auto mb-2">1</div>
+                <div className="font-semibold text-neon mb-1">
+                  {lang === 'he' ? 'שבוע 1-2' : 'Week 1-2'}
+                </div>
+                <div className="text-fg-muted">
+                  {lang === 'he' ? 'Kickoff + מחקר שוק' : 'Kickoff + Market Research'}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="w-8 h-8 bg-neon-2 rounded-full flex items-center justify-center text-bg font-bold mx-auto mb-2">2</div>
+                <div className="font-semibold text-neon-2 mb-1">
+                  {lang === 'he' ? 'שבוע 3' : 'Week 3'}
+                </div>
+                <div className="text-fg-muted">
+                  {lang === 'he' ? 'אסטרטגיה + תכנון' : 'Strategy + Planning'}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-neon to-neon-2 rounded-full flex items-center justify-center text-bg font-bold mx-auto mb-2">3</div>
+                <div className="font-semibold text-neon mb-1">
+                  {lang === 'he' ? 'שבוע 4' : 'Week 4'}
+                </div>
+                <div className="text-fg-muted">
+                  {lang === 'he' ? 'הפעלה + דיווח' : 'Launch + Reporting'}
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Accordion */}
