@@ -192,7 +192,7 @@ export const translations: Record<Lang, Translations> = {
     },
     contact: {
       header: 'צרו קשר',
-      subheader: 'דברו איתנו ישירות או מלאו את הטופס',
+      subheader: 'דברו איתנו ישירות',
       nameLabel: 'שם',
       namePlaceholder: 'מה השם שלך?',
       companyLabel: 'שם החברה',
@@ -295,7 +295,7 @@ export const translations: Record<Lang, Translations> = {
     },
     contact: {
       header: 'Contact Us',
-      subheader: 'Talk to us directly or fill out the form',
+      subheader: 'Talk to us directly',
       nameLabel: 'Name',
       namePlaceholder: "What's your name?",
       companyLabel: 'Company Name',
