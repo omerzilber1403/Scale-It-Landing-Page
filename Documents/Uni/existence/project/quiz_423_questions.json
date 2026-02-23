@@ -1777,9 +1777,11 @@
   {
     "id": 58343,
     "question": "how many mass extiction events occurred in the past?",
-    "correct_answer": "",
+    "correct_answer": "5",
     "wrong_answers": [
-      "10"
+      "10",
+      "7",
+      "3"
     ],
     "chapter": 4
   },
@@ -1869,5 +1871,215 @@
       "The singnificant reliance of cities on provisinning services"
     ],
     "chapter": 4
+  },
+  {
+    "id": 5,
+    "question": "Why is heterogeneity important for species richness?",
+    "correct_answer": "It provides diverse conditions for species with different ecological needs",
+    "wrong_answers": [
+      "It reduces competition between species with similar ecological requirements",
+      "It minimizes the need for large reserves",
+      "It ensures all species compete for the same resources"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 9,
+    "question": "Why is the current biodiversity crisis referred to as the sixth mass extinction?",
+    "correct_answer": "The current extinction rates are 50-10,000 times higher than background extinction rates and comparable to previous mass extinction events",
+    "wrong_answers": [
+      "Human actions are causing species to evolve faster than ever before",
+      "It is the sixth time biodiversity has been entirely lost across the globe",
+      "It marks the first extinction event caused solely by climate change"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 16,
+    "question": "Why do smaller particles in the nano to micron range pose a significant health risk?",
+    "correct_answer": "They remain suspended in the air longer and penetrate deeper into the lungs",
+    "wrong_answers": [
+      "They are radioactive and accumulate in the bloodstream",
+      "Larger particles block their movement, increasing concentration in one area",
+      "Their chemical composition is highly toxic to the brain"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 20,
+    "question": "Which of the following is the primary focus when discussing the quality parameters of domestic wastewater reuse?",
+    "correct_answer": "Solids, organic matter, and pathogens",
+    "wrong_answers": [
+      "Heavy metals, nitrogen, and pH",
+      "Color, odor, and taste",
+      "Radioactive contaminants and hydrocarbons"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 24,
+    "question": "From a perspective of environmental impact, why does it make little sense to build buildings with glass walls instead of building solid walls with windows?",
+    "correct_answer": "Big windows facilitate the Greenhouse effect",
+    "wrong_answers": [
+      "The embodied energy of glass is much higher than the embodied energy of concrete",
+      "The embodied energy of glass is much lower than the embodied energy of concrete",
+      "Glass is a very expensive material"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 25,
+    "question": "The building is often referred to as the third skin, because:",
+    "correct_answer": "It serves as a third interface between our body and the environment",
+    "wrong_answers": [
+      "It replaces the coat and upper layer we usually wear",
+      "It has healthy contribution to our life",
+      "It is not really a skin"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 28,
+    "question": "Why are cities considered both part of the problem and the solution in terms of sustainability?",
+    "correct_answer": "They contribute significantly to environmental problems but can drive changes toward sustainability",
+    "wrong_answers": [
+      "They occupy most of the Earth's landmass and are highly dependent on resources",
+      "They consume the least amount of energy but generate the most waste",
+      "They are disconnected from regional and global environmental systems"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 29,
+    "question": "What is the primary role of cities in environmental interactions?",
+    "correct_answer": "Cities act as nodes of production and consumption, relying on natural resource flows and generating waste",
+    "wrong_answers": [
+      "Cities are self-sustaining ecosystems that require no external resources",
+      "Cities only impact local environments without affecting global ecosystems",
+      "All answers are correct"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 30,
+    "question": "It was argued that human development relies on different forms of capital:",
+    "correct_answer": "Human capital, manmade capital, and natural capital",
+    "wrong_answers": [
+      "Financial capital and work capital",
+      "Natural capital and ecosystem services",
+      "Manmade capital and education driven capital"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 33,
+    "question": "According to Ehrlich and Holdren, human society's environmental impact is a function of:",
+    "correct_answer": "Population growth, society's level of affluence, and the use of technology",
+    "wrong_answers": [
+      "Population growth and the carrying capacity",
+      "Society's level of modernization, including technology and culture",
+      "Environmental policies adopted by the society"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 101,
+    "question": "Which of the following best defines 'supporting ecosystem services'?",
+    "correct_answer": "Services necessary for the production and maintenance of all other ecosystem services, such as nutrient cycling and soil formation",
+    "wrong_answers": [
+      "The goods humans directly extract from ecosystems, such as water and food"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 102,
+    "question": "Why is greywater treatment simpler compared to blackwater?",
+    "correct_answer": "Greywater has lower pollution levels and fewer health risks",
+    "wrong_answers": [
+      "Blackwater contains more dissolved solids than greywater"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 103,
+    "question": "What contributes most to the Urban Heat Island (UHI) effect in dense city centers?",
+    "correct_answer": "High building density, impermeable materials, and lack of vegetation",
+    "wrong_answers": [
+      "High skyscraper density, inefficient public transportation, and no access to renewable energy sources"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 104,
+    "question": "What is one of the main reasons poorer countries often show higher environmental impact according to the Environmental Performance Index (EPI)?",
+    "correct_answer": "Limited investment in environmental policy and regulation",
+    "wrong_answers": [
+      "Greater ecological footprints per capita due to high resource consumption"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 105,
+    "question": "High population density, and concentration of economic activity in cities:",
+    "correct_answer": "Increase city potential to advance a sustainability multiplier",
+    "wrong_answers": [
+      "Make cities less sustainable"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 106,
+    "question": "Adjusting our behavior, dress-code, and cultural customs to our climatic region:",
+    "correct_answer": "Enables us to reduce Operational Energy (OE)",
+    "wrong_answers": [
+      "Enables us to increase Operational Energy (OE)"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 107,
+    "question": "Volcanic eruption and power plant are examples of (respectively):",
+    "correct_answer": "Natural and anthropogenic air pollution sources",
+    "wrong_answers": [
+      "Clean and dirty air pollution sources"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 108,
+    "question": "The Reintroduction Specialists Group of the IUCN developed specific reintroduction guidelines to increase the success of reintroduction attempts. The guideline includes several phases. What is the first phase according to the guideline?",
+    "correct_answer": "A feasibility study to assess the potential success of the reintroduction",
+    "wrong_answers": [
+      "All answers are correct",
+      "A planning phase to plan the reintroduction program"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 109,
+    "question": "Which of the following contributes most significantly to global water stress?",
+    "correct_answer": "Increasing demand, shrinking sources, and anthropogenic contamination",
+    "wrong_answers": [
+      "ב + ג"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 110,
+    "question": "Which of the following best describes a bioclimatic approach to sustainable building?",
+    "correct_answer": "Designing buildings in response to local climate by using natural energy sources like sun and wind",
+    "wrong_answers": [
+      "Building at high density with uniform height to simplify construction planning"
+    ],
+    "chapter": 5
+  },
+  {
+    "id": 111,
+    "question": "Why might the extinction of a single species lead to a \"snowball effect\" in ecosystem stability?",
+    "correct_answer": "Ecosystem functions are interdependent, so the loss of one function can cascade into multiple failures",
+    "wrong_answers": [
+      "Ecosystems automatically compensate for species loss through abiotic resilience"
+    ],
+    "chapter": 5
   }
 ]
