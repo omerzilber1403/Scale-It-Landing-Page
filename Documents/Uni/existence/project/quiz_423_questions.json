@@ -1507,10 +1507,10 @@
   {
     "id": 19469,
     "question": "The following are conventional water sources:",
-    "correct_answer": "Shallow well water and surface water",
+    "correct_answer": "Rainwater harvesting and dew collection",
     "wrong_answers": [
       "Treated wastewater and deep groundwater",
-      "Rainwater harvesting and dew collection",
+      "Shallow well water and surface water",
       "Surface water and saline water"
     ],
     "chapter": 4
