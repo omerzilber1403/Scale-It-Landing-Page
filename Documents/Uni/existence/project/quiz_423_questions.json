@@ -1507,10 +1507,10 @@
   {
     "id": 19469,
     "question": "The following are conventional water sources:",
-    "correct_answer": "Rainwater harvesting and dew collection",
+    "correct_answer": "Shallow well water and surface water",
     "wrong_answers": [
       "Treated wastewater and deep groundwater",
-      "Shallow well water and surface water",
+      "Rainwater harvesting and dew collection",
       "Surface water and saline water"
     ],
     "chapter": 4
@@ -1518,10 +1518,10 @@
   {
     "id": 19470,
     "question": "The followings are alternative (new) water sources:",
-    "correct_answer": "Treated wastewater and groundwater",
+    "correct_answer": "Rainwater harvesting and dew collection",
     "wrong_answers": [
+      "Treated wastewater and groundwater",
       "Well water and surface water",
-      "Rainwater harvesting and dew collection",
       "Surface water and saline water"
     ],
     "chapter": 4
