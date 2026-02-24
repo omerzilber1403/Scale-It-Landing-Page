@@ -1919,9 +1919,9 @@
   {
     "id": 24,
     "question": "From a perspective of environmental impact, why does it make little sense to build buildings with glass walls instead of building solid walls with windows?",
-    "correct_answer": "Big windows facilitate the Greenhouse effect",
+    "correct_answer": "The embodied energy of glass is much higher than the embodied energy of concrete",
     "wrong_answers": [
-      "The embodied energy of glass is much higher than the embodied energy of concrete",
+      "Big windows facilitate the Greenhouse effect",
       "The embodied energy of glass is much lower than the embodied energy of concrete",
       "Glass is a very expensive material"
     ],
